@@ -2,638 +2,687 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le Clos de la Fuie — Gîte familial · La Perrière, Perche</title>
-<meta name="description" content="Gîte familial de charme au cœur de La Perrière, Petite Cité de Caractère du Perche. 6 personnes, 3 chambres, jardin clos & cabane. À 2 h de Paris.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Clos de la Fuie — Gîte familial dans le Perche, 6 personnes | La Perrière, Normandie</title>
+<meta name="description" content="Gîte de charme dans le Perche à La Perrière, à 2h de Paris. Maison de famille pour 6 personnes, 3 chambres, jardin clos et cabane sur pilotis. Location à la semaine en Normandie pour les familles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        forest: '#2D5016',
-        'forest-dark': '#1F3A10',
-        sage: '#6B8C6B',
-        'sage-light': '#A8C5A0',
-        beige: '#E5D9C9',
-        'beige-light': '#F5EFE6',
-        'warm-white': '#FAF8F4',
-        'dk': '#1E2B1E',
-      },
-      fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      }
-    }
-  }
-}
-</script>
-<style>
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: #FAF8F4; color: #1E2B1E; }
-
-.nav-scrolled { background: rgba(250,248,244,0.96); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-
-.hero-bg { background: linear-gradient(150deg, #1F3A10 0%, #2D5016 45%, #3D6828 100%); }
-
-.img-ph { background: linear-gradient(135deg, #E5D9C9 0%, #D0C3B0 100%); display:flex; align-items:center; justify-content:center; }
-
-.pricing-card { transition: transform .2s, box-shadow .2s; }
-.pricing-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(45,80,22,.15); }
-
-.sec-num { font-family: 'Playfair Display', serif; font-size: 5.5rem; font-weight: 400; color: rgba(107,140,107,.12); line-height: 1; user-select: none; }
-
-@keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.4} }
-.pulse { animation: pulse-dot 2s infinite; }
-
-@keyframes bounce-arr { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
-.bounce { animation: bounce-arr 1.6s infinite; }
-
-.gallery-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:220px 220px; gap:8px; }
-.gallery-main { grid-row: 1/3; }
-
-.sticky-bar { position:fixed; bottom:0; left:0; right:0; z-index:50; transform:translateY(100%); transition:transform .3s ease; }
-.sticky-bar.show { transform:translateY(0); }
-
-.cal-week { cursor:pointer; border-radius:6px; padding:10px 14px; text-align:center; font-size:.82rem; transition:all .15s; }
-.cal-week.avail { background:#EEF5EC; border:1px solid #A8C5A0; color:#2D5016; }
-.cal-week.avail:hover,.cal-week.sel { background:#2D5016; color:#fff; border-color:#2D5016; }
-.cal-week.taken { background:#F5F5F4; border:1px solid #E0DEDA; color:#B0A898; cursor:default; text-decoration:line-through; }
-
-.faq-body { max-height:0; overflow:hidden; transition:max-height .3s ease; }
-.faq-body.open { max-height:180px; }
-
-.stars { color:#C49A20; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav" class="fixed top-0 left-0 right-0 z-40 py-4 px-6 transition-all duration-300">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-    <div class="leading-tight">
-      <div id="nlogo" class="font-serif text-xl font-medium text-white">Le Clos de la Fuie</div>
-      <div id="nsub" class="text-xs text-white/60 tracking-widest uppercase">La Perrière · Perche</div>
+<!-- ===================== SEASON TOP BAR ===================== -->
+<div class="topbar" id="topbar">
+  <span class="tb-dot"></span>
+  <span class="tb-msg" data-i18n="tb.msg">Été 2026 — il reste quelques semaines à réserver</span>
+  <a href="#reserver" data-i18n="tb.cta">Voir les disponibilités →</a>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <a class="nav-brand" href="#top">
+    <span class="mark">Le Clos de la Fuie</span>
+    <span class="sub">La Perrière · Perche</span>
+  </a>
+  <div class="nav-links">
+    <a href="#maison" data-i18n="nav.house">La Maison</a>
+    <a href="#jardin" data-i18n="nav.garden">Jardin &amp; Cabane</a>
+    <a href="#territoire" data-i18n="nav.region">Le Perche</a>
+    <a href="#journal" data-i18n="nav.journal">Journal</a>
+    <a href="#avis" data-i18n="nav.reviews">Avis</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang" id="lang">
+      <button data-lang="fr" class="on">FR</button>
+      <button data-lang="en">EN</button>
     </div>
-    <div id="nlinks" class="hidden md:flex items-center gap-7">
-      <a href="#maison" class="text-sm text-white/75 hover:text-white transition-colors">La Maison</a>
-      <a href="#jardin" class="text-sm text-white/75 hover:text-white transition-colors">Jardin & Cabane</a>
-      <a href="#territoire" class="text-sm text-white/75 hover:text-white transition-colors">Le Territoire</a>
-      <a href="#avis" class="text-sm text-white/75 hover:text-white transition-colors">Avis</a>
-      <a href="#faq" class="text-sm text-white/75 hover:text-white transition-colors">FAQ</a>
-    </div>
-    <div class="flex items-center gap-3">
-      <div class="hidden md:flex items-center gap-1 text-sm">
-        <button class="text-white font-medium">FR</button>
-        <span class="text-white/40">·</span>
-        <button class="text-white/50 hover:text-white transition-colors">EN</button>
-      </div>
-      <a href="#reserver" class="bg-white text-forest text-sm font-semibold px-5 py-2 rounded hover:bg-beige-light transition-colors">Réserver</a>
-    </div>
+    <a href="#reserver" class="btn btn-primary btn-sm" data-i18n="nav.cta">Réserver</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero" class="hero-bg min-h-screen flex flex-col justify-center relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M40 0C18 0 0 18 0 40s18 40 40 40 40-18 40-40S62 0 40 0zm0 70C23.4 70 10 56.6 10 40S23.4 10 40 10s30 13.4 30 30-13.4 30-30 30z\' fill=\'%23ffffff\' fill-opacity=\'0.3\'/%3E%3C/svg%3E');"></div>
-  <div class="relative max-w-6xl mx-auto px-6 pt-28 pb-16 w-full">
-    <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full mb-8 border border-white/20">
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#maison"><span data-i18n="nav.house">La Maison</span><small data-i18n="mm.house">Chambres, pièce de vie, équipements</small></a>
+  <a href="#jardin"><span data-i18n="nav.garden">Jardin &amp; Cabane</span><small data-i18n="mm.garden">Le jardin clos & la cabane sur pilotis</small></a>
+  <a href="#territoire"><span data-i18n="nav.region">Le Perche</span><small data-i18n="mm.region">Le village &amp; la région</small></a>
+  <a href="#journal"><span data-i18n="nav.journal">Journal</span><small data-i18n="mm.journal">Le blog &amp; nos articles</small></a>
+  <a href="#avis"><span data-i18n="nav.reviews">Avis</span><small data-i18n="mm.reviews">Ce que disent nos hôtes</small></a>
+  <a href="#reserver" class="btn btn-light btn-lg mm-cta" data-i18n="nav.cta">Réserver</a>
+</div>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-rating">
       <span class="stars">★★★★★</span>
-      <span>4,9 / 5 · Coup de cœur des familles</span>
+      <span data-i18n="hero.rating">5 / 5 · Coup de cœur des familles sur Avis Google et Airbnb</span>
     </div>
-    <h1 class="font-serif text-5xl md:text-7xl text-white font-normal leading-tight mb-6 max-w-3xl">
-      Une semaine au vert,<br><em>à 2 h de Paris</em>
-    </h1>
-    <p class="text-white/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-      Une maison de famille pour 6 personnes au cœur d'un village classé du Perche. Jardin clos, cabane pour les enfants, et le calme de la campagne normande.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-      <a href="#reserver" class="inline-flex items-center justify-center gap-2 bg-white text-forest font-semibold px-8 py-4 rounded hover:bg-beige-light transition-all shadow-lg">
-        Vérifier les disponibilités →
-      </a>
-      <a href="#maison" class="inline-flex items-center justify-center gap-2 border border-white/50 text-white px-8 py-4 rounded hover:bg-white/10 transition-all">
-        Découvrir
-      </a>
-    </div>
-    <div class="flex items-center gap-2 text-white/60 text-sm mb-14">
-      <span class="w-2 h-2 bg-green-400 rounded-full pulse"></span>
-      Été 2026 — quelques semaines disponibles
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
-      <div><div class="font-serif text-4xl text-white">6</div><div class="text-white/50 text-xs mt-1 uppercase tracking-wider">Personnes</div></div>
-      <div><div class="font-serif text-4xl text-white">3</div><div class="text-white/50 text-xs mt-1 uppercase tracking-wider">Chambres</div></div>
-      <div><div class="font-serif text-4xl text-white">165 m²</div><div class="text-white/50 text-xs mt-1 uppercase tracking-wider">Habitables</div></div>
-      <div><div class="font-serif text-4xl text-white">2 h</div><div class="text-white/50 text-xs mt-1 uppercase tracking-wider">De Paris</div></div>
+    <h1 class="hero-anim" data-i18n="hero.h1" style="font-size: 50px">Le Clos de la Fuie&nbsp;:<br><em>votre maison de campagne</em></h1>
+    <p class="hero-loc hero-anim" data-i18n="hero.loc">La Perrière · Le Perche · à 2 h de Paris</p>
+    <p class="lead hero-anim" data-i18n="hero.lead">Une maison de famille pour 6 personnes au cœur du village signature du Perche. 
+Un lieu pensé pour ralentir, profiter du jardin, de la cabane et du calme environnant. 
+Idéal pour s'installer quelques jours et se retrouver.</p>
+    <div class="hero-actions hero-anim">
+      <a href="#reserver" class="btn btn-light btn-lg" data-i18n="hero.cta1">Vérifier les disponibilités <span class="arrow">→</span></a>
+      <span class="note"><span class="dot"></span><span data-i18n="hero.avail">Été 2026 — quelques semaines disponibles</span></span>
     </div>
   </div>
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 text-xs">
-    <span class="uppercase tracking-widest text-[10px]">Découvrir</span>
-    <div class="bounce text-lg">↓</div>
+  <div class="scroll-cue"><span data-i18n="hero.scroll">Découvrir</span><span class="l"></span></div>
+</header>
+
+<!-- ===================== FACTS ===================== -->
+<section class="facts">
+  <div class="wrap">
+    <div class="fact"><div class="n">6</div><div class="l" data-i18n="facts.guests">Personnes</div></div>
+    <div class="fact"><div class="n">3</div><div class="l" data-i18n="facts.bedrooms">Chambres</div></div>
+    <div class="fact"><div class="n">165<small style="font-size:.5em"> m²</small></div><div class="l" data-i18n="facts.surface">Habitables</div></div>
+    <div class="fact"><div class="n">2 h</div><div class="l" data-i18n="facts.paris">De Paris</div></div>
   </div>
 </section>
 
-<!-- BIENVENUE -->
-<section class="py-24 px-6 bg-warm-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div>
-        <p class="text-sage text-xs uppercase tracking-widest mb-4 font-medium">Bienvenue chez Aurélie</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-dk mb-6 leading-tight">Une vraie maison de famille,<br><em>à privatiser pour votre tribu</em></h2>
-        <p class="text-dk/65 leading-relaxed mb-5">Le Clos de la Fuie réunit deux maisons percheronnes — l'une du XVII<sup>e</sup>, l'autre du XIX<sup>e</sup> siècle — autour d'un surprenant jardin clos de murs. Orientée plein sud, vivante et joyeuse, elle vous attend au cœur de La Perrière, « la Perle du Perche », avec ses commerces à pied.</p>
-        <p class="text-dk/65 leading-relaxed mb-8">Ici, pas de décor stéréotypé : des livres, des objets chinés et des jeux qui racontent une histoire. Trois grandes chambres de plus de 20 m², une salle de jeux avec piano, et une cabane sur pilotis pour les aventures des enfants.</p>
-        <a href="#maison" class="inline-flex items-center gap-2 text-forest font-medium border-b-2 border-forest pb-0.5 hover:gap-4 transition-all text-sm">Visiter la maison →</a>
+<!-- ===================== INTRO / WELCOME ===================== -->
+<section class="section" id="intro">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-media reveal">
+        <img src="images/real-garden-wide.jpg" alt="La façade ocre et le jardin clos du Clos de la Fuie">
+        <span class="tag" data-i18n="intro.tag">Le Clos de la Fuie côté sud</span>
       </div>
-      <div class="aspect-[4/5] rounded-2xl overflow-hidden img-ph">
-        <div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-6">
-          <div><div class="text-7xl mb-3">🏡</div><div class="text-sm font-medium">Le jardin clos et la façade plein sud</div><div class="text-xs mt-1 opacity-60">Petite Cité de Caractère®</div></div>
+      <div class="split-body reveal d1">
+        <span class="overline" data-i18n="intro.over">Bienvenue chez Aurélie</span>
+        <h2 data-i18n="intro.h2">Une vraie maison de famille, à privatiser pour votre tribu</h2>
+        <p data-i18n="intro.p1">Le Clos de la Fuie réunit deux maisons percheronnes — l'une du XVIIᵉ, l'autre du XIXᵉ siècle — autour d'un surprenant jardin clos de murs. Orientée plein sud, vivante et joyeuse, elle vous attend au cœur de La Perrière, « la Perle du Perche », avec ses commerces à pied.</p>
+        <p data-i18n="intro.p2">Ici, pas de décor stéréotypé : des livres, des objets chinés et des jeux qui racontent une histoire. Trois grandes chambres de plus de 20 m², une salle de jeux avec piano, et une cabane sur pilotis pour les aventures des enfants ou se ressourcer.</p>
+        <div class="chips" style="margin-top:24px">
+          <span class="chip"><span class="ch-dia"></span><span data-i18n="hl1">Au cœur du village</span></span>
+          <span class="chip"><span class="ch-dia"></span><span data-i18n="hl2">Commerces à pied</span></span>
+          <span class="chip"><span class="ch-dia"></span><span data-i18n="hl3">Salle de jeux &amp; piano</span></span>
+        </div>
+        <a href="#maison" class="btn btn-ghost" data-i18n="intro.cta">Visiter la maison <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SELLING POINTS ===================== -->
+<section class="section tight bg-sand">
+  <div class="wrap">
+    <div class="points">
+      <div class="point reveal">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42V26"/><path d="M24 26c0-7 5-12 12-12-1 7-5 12-12 12Z"/><path d="M24 30c0-6-5-10-11-10 1 6 5 10 11 10Z"/><path d="M8 42h32"/></svg></div>
+        <h3 data-i18n="pt1.h">Jardin privatif clos</h3>
+        <p data-i18n="pt1.p">Un grand jardin paysagé clos de murs et un verger d'une trentaine d'arbres fruitiers, entièrement cloturé. Les enfants jouent en liberté, vous vous reposez à l'ombre.</p>
+      </div>
+      <div class="point reveal d1">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 24 24 11l16 13"/><path d="M11 22v16h26V22"/><path d="M20 38v-9h8v9"/><path d="M11 38h26"/></svg></div>
+        <h3 data-i18n="pt2.h">Cabane sur pilotis</h3>
+        <p data-i18n="pt2.p">Au fond du verger, une cabane en bois perchée attend petits et grands pour de trépidantes aventures — et de jolis apéros au coucher du soleil.</p>
+      </div>
+      <div class="point reveal d2">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 14v10l7 4"/></svg></div>
+        <h3 data-i18n="pt3.h">À 2 h de Paris</h3>
+        <p data-i18n="pt3.p">Assez loin pour déconnecter, assez près pour partir le soir. Boulangerie bio, épicerie et restaurants à pied, gares à moins de 30 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="section" id="galerie">
+  <div class="wrap">
+    <div class="head center reveal" style="margin-bottom:42px">
+      <span class="overline center" data-i18n="gal.over">En images</span>
+      <h2 data-i18n="gal.h2">Un avant-goût du séjour</h2>
+      <div class="sep"><span class="dia"></span></div>
+    </div>
+    <div class="gallery reveal d1" id="gallery">
+      <figure class="g-tall" data-src="images/hero-exterior.jpg" data-cap="La façade plein sud et son jardin fleuri"><img src="images/hero-exterior.jpg" alt="Façade et jardin"><figcaption data-i18n="gal.c1">La façade &amp; le jardin</figcaption></figure>
+      <figure class="g-wide" data-src="images/real-dining.jpg" data-cap="La salle à manger et la cuisine, baignées de lumière"><img src="images/real-dining.jpg" alt="Salle à manger"><figcaption data-i18n="gal.c2">La cuisine dînatoire</figcaption></figure>
+      <figure data-src="images/cabane-1.jpg" data-cap="La cabane sur pilotis au fond du verger"><img src="images/cabane-1.jpg" alt="Cabane sur pilotis" style="object-position:50% 64%"><figcaption data-i18n="gal.c3">La cabane</figcaption></figure>
+      <figure data-src="images/real-bed-stone.jpg" data-cap="Une chambre de caractère et sa cheminée d'origine"><img src="images/real-bed-stone.jpg" alt="Chambre"><figcaption data-i18n="gal.c4">Les chambres</figcaption></figure>
+      <figure data-src="images/real-garden-table.jpg" data-cap="Un coin de jardin pour le café du matin"><img src="images/real-garden-table.jpg" alt="Coin jardin"><figcaption data-i18n="gal.c5">Le jardin</figcaption></figure>
+      <figure data-src="images/real-gameroom.jpg" data-cap="La salle de jeux et de musique, avec piano et baby-foot"><img src="images/real-gameroom.jpg" alt="Salle de jeux"><figcaption data-i18n="gal.c6">La salle de jeux</figcaption></figure>
+      <a class="more" href="#maison"><span data-i18n="gal.more">Tout voir →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LA MAISON ===================== -->
+<section class="section bg-linen2" id="maison">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="overline"><span class="section-num">01</span> &nbsp;<span data-i18n="house.over">La Maison</span></span>
+      <h2 data-i18n="house.h2">165 m² pour vivre ensemble, pièce après pièce</h2>
+      <p class="lead" data-i18n="house.lead">Une bâtisse discrète côté place, lumineuse côté jardin. Toute équipée, pensée pour les familles : on s'y installe pour un séjour serein sans rien apporter d'autre que ses envies.</p>
+    </div>
+
+    <div class="rooms reveal d1" style="margin-top:48px">
+      <div class="room" data-src="images/real-kitchen.jpg" data-cap="La pièce de vie — cuisine et grande table conviviale">
+        <img src="images/real-kitchen.jpg" alt="Pièce de vie">
+        <div class="meta"><h3 data-i18n="room1.h">La cuisine dînatoire</h3><p data-i18n="room1.p">Cuisine ouverte &amp; grande table conviviale</p></div>
+      </div>
+      <div class="room" data-src="images/real-bed-blue.jpg" data-cap="3 chambres de plus de 20 m² chacune">
+        <img src="images/real-bed-blue.jpg" alt="Chambres">
+        <div class="meta"><h3 data-i18n="room2.h">Les chambres</h3><p data-i18n="room2.p">La Miroir - La Rétro Voyage - La Gustavienne</p></div>
+      </div>
+      <div class="room" data-src="images/real-bathroom.jpg" data-cap="La salle d'eau, lumineuse et spacieuse">
+        <img src="images/real-bathroom.jpg" alt="Salle d'eau">
+        <div class="meta"><h3 data-i18n="room3.h">La salle d'eau</h3><p data-i18n="room3.p">Lumineuse et spacieuse</p></div>
+      </div>
+      <div class="room" data-src="images/real-gameroom.jpg" data-cap="La salle de jeux et de musique, avec piano">
+        <img src="images/real-gameroom.jpg" alt="Salle de jeux">
+        <div class="meta"><h3 data-i18n="room4.h">La salle de jeux</h3><p data-i18n="room4.p">La pièce bonus, avec piano</p></div>
+      </div>
+      <div class="room" data-src="images/palier.jpg" data-cap="Le palier-bureau, avec vue sur le village">
+        <img src="images/palier.jpg" alt="Palier" style="object-position:50% 62%">
+        <div class="meta"><h3 data-i18n="room5.h">Le palier</h3><p data-i18n="room5.p">Coin bureau, vue sur le village</p></div>
+      </div>
+      <div class="room" data-src="images/house-interior.jpg" data-cap="Le coin cheminée pour les soirées d'automne">
+        <img src="images/house-interior.jpg" alt="Coin cheminée">
+        <div class="meta"><h3 data-i18n="room6.h">Le salon</h3><p data-i18n="room6.p">Canapés, cheminée &amp; bibliothèques</p></div>
+      </div>
+    </div>
+
+    <div style="margin-top:64px" class="reveal">
+      <h3 style="font-size:26px; margin-bottom:6px" data-i18n="equip.h">Tout est déjà là</h3>
+      <p style="color:var(--ink-soft); margin-bottom:6px" data-i18n="equip.sub">Voici l'essentiel de l'équipement :</p>
+      <ul class="equip" id="equip"></ul>
+    </div>
+
+    <!-- named bedrooms (insp. Partoucie) -->
+    <div style="margin-top:76px" class="reveal">
+      <span class="overline"><span data-i18n="beds.over">Les chambres</span></span>
+      <h3 style="font-size:clamp(24px,3.4vw,36px); margin-top:14px; max-width:18ch" data-i18n="beds.h">Trois chambres, 
+trois ambiances</h3>
+      <div class="beds">
+        <div class="beds-media">
+          <img src="images/real-bed-named.jpg" alt="Une chambre de caractère, avec cheminée d'origine">
+          <span class="tag" data-i18n="beds.tag">+ de 20 m² chacune</span>
+        </div>
+        <div class="bedlist">
+          <div class="bedrow">
+            <div class="bh"><h4 data-i18n="bed1.h">La Miroir</h4><span class="cfg" data-i18n="bed1.cfg">1 lit 160</span></div>
+            <p data-i18n="bed1.p">La grande chambre parentale, avec sa bibliothèque.  Lumière du matin, cheminée d'origine et vue sur le village.</p>
+            <div class="feat"><span data-i18n="bed1.f1">Vue village</span><span data-i18n="bed1.f2">Cheminée</span><span data-i18n="bed1.f3">Bureau</span></div>
+          </div>
+          <div class="bedrow">
+            <div class="bh"><h4 data-i18n="bed2.h">La Rétro Voyage</h4><span class="cfg" data-i18n="bed2.cfg">1 LIT 140</span></div>
+            <p data-i18n="bed2.p">La chambre lumineuse toute la journée.
+Cheminée d'origine et espace lecture douillé.</p>
+            <div class="feat"><span data-i18n="bed2.f1">Vue jardin</span><span data-i18n="bed2.f2">Côté village</span></div>
+          </div>
+          <div class="bedrow">
+            <div class="bh"><h4 data-i18n="bed3.h">La Gustavienne</h4><span class="cfg" data-i18n="bed3.cfg">1 LIT 140 + LIT 90</span></div>
+            <p data-i18n="bed3.p">La chambre lumineuse avec deux vues : jardin et village.
+Cheminée d'origine, espace de travail et de lecture</p>
+            <div class="feat"><span data-i18n="bed3.f1">Vue village et jardin</span><span data-i18n="bed3.f2">Bureau</span></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-3 gap-6 mt-20">
-      <div class="bg-beige-light p-8 rounded-xl">
-        <div class="text-3xl mb-4">🌿</div>
-        <h3 class="font-serif text-xl mb-3">Jardin privatif clos</h3>
-        <p class="text-dk/60 text-sm leading-relaxed">Un grand jardin paysagé et un verger d'une trentaine d'arbres fruitiers, entièrement clos de murs. Les enfants jouent en liberté, vous vous reposez à l'ombre.</p>
-      </div>
-      <div class="bg-beige-light p-8 rounded-xl">
-        <div class="text-3xl mb-4">🌲</div>
-        <h3 class="font-serif text-xl mb-3">Cabane sur pilotis</h3>
-        <p class="text-dk/60 text-sm leading-relaxed">Au fond du verger, une cabane en bois perchée attend petits et grands pour de trépidantes aventures — et de jolis apéros au coucher du soleil.</p>
-      </div>
-      <div class="bg-beige-light p-8 rounded-xl">
-        <div class="text-3xl mb-4">🚂</div>
-        <h3 class="font-serif text-xl mb-3">À 2 h de Paris</h3>
-        <p class="text-dk/60 text-sm leading-relaxed">Assez loin pour déconnecter, assez près pour partir le vendredi soir. Boulangerie bio, épicerie et restaurants à pied, gares à moins de 30 minutes.</p>
+  </div>
+</section>
+
+<!-- ===================== PULL QUOTE BAND ===================== -->
+<section class="quoteband reveal">
+  <span class="qb-mark">«</span>
+  <blockquote data-i18n="qb.text">Ici, le temps se suspend.<br>On vit dehors, on dîne tard, les enfants courent — et Paris semble à mille lieues. »</blockquote>
+  <div class="qb-by" data-i18n="qb.by">Le Clos de la Fuie · La Perrière</div>
+</section>
+
+<!-- ===================== JARDIN & CABANE ===================== -->
+<section class="section bg-forest" id="jardin">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="overline"><span class="section-num">02</span> &nbsp;<span data-i18n="garden.over">Le Jardin &amp; la Cabane</span></span>
+      <span class="kicker" data-i18n="garden.kicker">Le temps suspendu, dehors</span>
+      <h2 data-i18n="garden.h2">Le vrai luxe, pour une famille : un extérieur à soi</h2>
+      <p class="lead" data-i18n="garden.lead">Le jardin, le verger et la cabane sont autant d'espaces pour se reposer, se ressourcer et s'amuser — une invitation à prendre et partager du bon temps, tout naturellement.</p>
+    </div>
+
+    <div class="gallery reveal d1" style="grid-auto-rows:230px; margin-top:48px">
+      <figure class="g-wide g-tall" data-src="images/cabane-1.jpg" data-cap="La cabane sur pilotis, au fond du verger"><img src="images/cabane-1.jpg" alt="La cabane sur pilotis"><figcaption data-i18n="gc1">La cabane sur pilotis</figcaption></figure>
+      <figure data-src="images/garden-big.jpg" data-cap="Massifs d'iris et arbres fruitiers"><img src="images/garden-big.jpg" alt="Massifs du jardin"><figcaption data-i18n="gc2">Le jardin paysagé</figcaption></figure>
+      <figure data-src="images/coin-lecture.jpg" data-cap="Le coin lecture et ses transats, à l'ombre du magnolia"><img src="images/coin-lecture.jpg" alt="Le coin lecture"><figcaption data-i18n="gc3">Le coin lecture</figcaption></figure>
+      <figure data-src="images/cabane-3.jpg" data-cap="L'intérieur cosy de la cabane"><img src="images/cabane-3.jpg" alt="Intérieur de la cabane"><figcaption data-i18n="gc4">Sous la cabane</figcaption></figure>
+      <figure data-src="images/real-garden-table.jpg" data-cap="Un coin pour le petit-déjeuner au soleil"><img src="images/real-garden-table.jpg" alt="Coin petit-déjeuner"><figcaption data-i18n="gc5">Mille coins paisibles</figcaption></figure>
+    </div>
+
+    <div style="display:flex; gap:30px; flex-wrap:wrap; margin-top:42px; align-items:center" class="reveal">
+      <p class="serif-em" style="font-size:clamp(20px,2.6vw,28px); color:var(--white); max-width:24ch; line-height:1.4" data-i18n="garden.quote">« À vous de trouver votre coin paisible préféré. »</p>
+      <a href="#reserver" class="btn btn-light btn-lg" style="margin-left:auto" data-i18n="garden.cta">Réserver vos vacances <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IMAGE QUOTE BAND ===================== -->
+<section class="section bg-sand imgquote">
+  <div class="wrap">
+    <div class="iq-grid reveal">
+      <figure class="iq-media">
+        <img src="images/garden-table-portrait.jpg" alt="La grande table dressée au jardin, à l'ombre des arbres">
+      </figure>
+      <div class="iq-body">
+        <span class="qb-mark" style="color:var(--terracotta)">«</span>
+        <blockquote class="iq-quote" data-i18n="iq.text">On dresse la grande table du jardin, à l'ombre des arbres — et le déjeuner s'étire, doucement, jusqu'au goûter. »</blockquote>
+        <div class="iq-by" data-i18n="iq.by">Aurélie · Le Clos de la Fuie</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="py-16 px-6" style="background:#F2EAE0;">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-10">
-      <p class="text-sage text-xs uppercase tracking-widest mb-3 font-medium">En images</p>
-      <h2 class="font-serif text-3xl text-dk">Un avant-goût du séjour</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-main img-ph rounded-xl overflow-hidden">
-        <div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-4"><div><div class="text-5xl mb-2">🏠</div><div class="text-sm">La façade & le jardin</div></div></div>
-      </div>
-      <div class="img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-3xl mb-1">🛋️</div><div class="text-xs">La pièce de vie</div></div></div></div>
-      <div class="img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-3xl mb-1">🌲</div><div class="text-xs">La cabane</div></div></div></div>
-      <div class="img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-3xl mb-1">🛏️</div><div class="text-xs">Les chambres</div></div></div></div>
-      <div class="img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-3xl mb-1">🌳</div><div class="text-xs">Le jardin</div></div></div></div>
-    </div>
-    <div class="text-center mt-6">
-      <button class="inline-flex items-center gap-2 text-forest text-sm font-medium border border-forest px-6 py-3 rounded hover:bg-forest hover:text-white transition-all">Tout voir →</button>
-    </div>
-  </div>
-</section>
-
-<!-- 01 LA MAISON -->
-<section id="maison" class="py-24 px-6 bg-warm-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-start gap-4 mb-16">
-      <span class="sec-num">01</span>
-      <div class="pt-3">
-        <p class="text-sage text-xs uppercase tracking-widest mb-2 font-medium">La Maison</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-dk leading-tight">165 m² pour vivre ensemble,<br><em>pièce après pièce</em></h2>
-        <p class="text-dk/55 mt-4 max-w-xl text-sm leading-relaxed">Une bâtisse discrète côté place, lumineuse côté jardin. Toute équipée, pensée pour les familles : on s'y installe pour la semaine sans rien apporter d'autre que ses envies.</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-14">
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">🛋️</div><div class="text-xs">Pièce de vie</div></div></div></div><h3 class="font-serif text-base">La pièce de vie</h3><p class="text-dk/55 text-xs mt-1">Salon, cuisine ouverte & bibliothèques</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">🛏️</div><div class="text-xs">Chambres</div></div></div></div><h3 class="font-serif text-base">Les chambres</h3><p class="text-dk/55 text-xs mt-1">3 chambres de + de 20 m²</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">🚿</div><div class="text-xs">Salle d'eau</div></div></div></div><h3 class="font-serif text-base">La salle d'eau</h3><p class="text-dk/55 text-xs mt-1">Lumineuse et spacieuse</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">🎹</div><div class="text-xs">Salle de jeux</div></div></div></div><h3 class="font-serif text-base">La salle de jeux</h3><p class="text-dk/55 text-xs mt-1">La pièce bonus, avec piano</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">💻</div><div class="text-xs">Palier</div></div></div></div><h3 class="font-serif text-base">Le palier</h3><p class="text-dk/55 text-xs mt-1">Coin bureau, avec vue</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25"><div class="text-center"><div class="text-4xl mb-1">🔥</div><div class="text-xs">Cheminée</div></div></div></div><h3 class="font-serif text-base">Le coin cheminée</h3><p class="text-dk/55 text-xs mt-1">Pour les soirées d'hiver</p></div>
-    </div>
-    <div class="bg-beige-light rounded-2xl p-8">
-      <h3 class="font-serif text-2xl mb-2">Tout est déjà là</h3>
-      <p class="text-dk/55 text-sm mb-6">Linge de maison et draps fournis, ménage en option.</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-dk/70">
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Wifi inclus</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Linge & draps</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Cuisine équipée</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Parking gratuit</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Cheminée</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> BBQ / plancha</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Jeux de société</div>
-        <div class="flex items-center gap-2"><span class="text-forest font-bold">✓</span> Piano</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 02 JARDIN & CABANE -->
-<section id="jardin" class="py-24 px-6" style="background:#F0EBE3;">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-start gap-4 mb-16">
-      <span class="sec-num">02</span>
-      <div class="pt-3">
-        <p class="text-sage text-xs uppercase tracking-widest mb-2 font-medium">Le Jardin & la Cabane</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-dk leading-tight">Le vrai luxe, pour une famille :<br><em>un dehors à soi</em></h2>
-        <p class="text-dk/55 mt-4 max-w-xl text-sm leading-relaxed">Le jardin, le verger et la cabane sont autant d'espaces pour se reposer, se ressourcer et s'amuser — une invitation à prendre et partager du bon temps, tout naturellement.</p>
-      </div>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6 mb-10">
-      <div class="aspect-[4/3] img-ph rounded-2xl overflow-hidden">
-        <div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-6xl mb-2">🌲</div><div class="text-sm">La cabane sur pilotis</div></div></div>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="aspect-square img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-2"><div><div class="text-3xl mb-1">🌸</div><div class="text-xs">Le jardin paysagé</div></div></div></div>
-        <div class="aspect-square img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-2"><div><div class="text-3xl mb-1">🍎</div><div class="text-xs">Le verger</div></div></div></div>
-        <div class="aspect-square img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-2"><div><div class="text-3xl mb-1">🏡</div><div class="text-xs">Sous la cabane</div></div></div></div>
-        <div class="aspect-square img-ph rounded-xl overflow-hidden"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center p-2"><div><div class="text-3xl mb-1">☕</div><div class="text-xs">Mille coins paisibles</div></div></div></div>
-      </div>
-    </div>
-    <div class="text-center py-10">
-      <blockquote class="font-serif text-2xl md:text-3xl text-dk/75 italic">« À vous de trouver votre coin paisible préféré. »</blockquote>
-    </div>
-    <div class="text-center">
-      <a href="#reserver" class="inline-flex items-center gap-2 bg-forest text-white font-medium px-8 py-4 rounded hover:bg-forest-dark transition-all">Réserver vos vacances →</a>
-    </div>
-  </div>
-</section>
-
-<!-- 03 RÉSERVER -->
-<section id="reserver" class="py-24 px-6 bg-warm-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-start gap-4 mb-16">
-      <span class="sec-num">03</span>
-      <div class="pt-3">
-        <p class="text-sage text-xs uppercase tracking-widest mb-2 font-medium">Réserver</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-dk leading-tight">Des tarifs clairs,<br><em>à la semaine</em></h2>
-        <p class="text-dk/55 mt-4 text-sm">La maison entière, pour 6 personnes. Du samedi au samedi en haute saison, séjours courts possibles le reste de l'année.</p>
-      </div>
+<!-- ===================== PRICING ===================== -->
+<section class="section" id="reserver">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="overline center"><span class="section-num">03</span> &nbsp;<span data-i18n="price.over">Réserver</span></span>
+      <span class="kicker" data-i18n="price.kicker">Ouvert de mai à fin septembre</span>
+      <h2 data-i18n="price.h2">Nos tarifs, simples et transparents</h2>
+      <p class="lead" data-i18n="price.lead">La maison entièrement privatisée pour vous : 6 personnes, 3 chambres, jardin clos et cabane. Un seul tarif à la nuit, dégressif selon la durée — sans jour d'arrivée imposé.</p>
+      <div class="sep"><span class="dia"></span></div>
     </div>
 
-    <!-- Pricing -->
-    <div class="grid md:grid-cols-3 gap-6 mb-10">
-      <div class="pricing-card border border-beige rounded-2xl p-8">
-        <p class="text-sage text-xs uppercase tracking-widest mb-1">Basse saison</p>
-        <p class="text-dk/50 text-xs mb-5">Oct. → Mars · hors vacances</p>
-        <div class="font-serif text-5xl text-dk">690 €</div>
-        <div class="text-dk/40 text-sm mb-6">/ semaine</div>
-        <ul class="space-y-2 text-sm text-dk/70 mb-8">
-          <li><span class="text-sage mr-1">✦</span>Idéal pour une escapade nature</li>
-          <li><span class="text-sage mr-1">✦</span>Court séjour possible (3 nuits)</li>
-          <li><span class="text-sage mr-1">✦</span>Feu de cheminée inclus</li>
+    <div class="price-grid reveal d1" style="margin-top:48px; grid-template-columns:repeat(2,1fr); max-width:760px; margin-left:auto; margin-right:auto">
+      <div class="price-card">
+        <div class="season" data-i18n="price.s1">Séjour court</div>
+        <div class="when" data-i18n="price.w1">De 4 à 6 nuits</div>
+        <div class="amt">260 € / nuit</div>
+        <ul class="pl">
+          <li>✦ <span data-i18n="price.l1a">Minimum 4 nuits</span></li>
+          <li>✦ <span data-i18n="price.l1b">Arrivée le jour de votre choix</span></li>
+          <li>✦ <span data-i18n="price.l1c">Maison entièrement privatisée</span></li>
         </ul>
-        <a href="#form" class="block text-center border border-forest text-forest text-sm font-medium px-6 py-3 rounded hover:bg-forest hover:text-white transition-all">Demander ces dates</a>
       </div>
-
-      <div class="pricing-card bg-forest text-white rounded-2xl p-8 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-light text-dk text-xs px-4 py-1 rounded-full font-semibold whitespace-nowrap">Le plus demandé</div>
-        <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Moyenne saison</p>
-        <p class="text-white/40 text-xs mb-5">Avril → Juin · Septembre</p>
-        <div class="font-serif text-5xl">890 €</div>
-        <div class="text-white/40 text-sm mb-6">/ semaine</div>
-        <ul class="space-y-2 text-sm text-white/80 mb-8">
-          <li><span class="text-sage-light mr-1">✦</span>La meilleure lumière sur le jardin</li>
-          <li><span class="text-sage-light mr-1">✦</span>Vacances de printemps & Toussaint</li>
-          <li><span class="text-sage-light mr-1">✦</span>Samedi → samedi</li>
+      <div class="price-card feature">
+        <span class="badge-feature" data-i18n="price.popular">Le meilleur tarif</span>
+        <div class="season" data-i18n="price.s2">Séjour d'une semaine</div>
+        <div class="when" data-i18n="price.w2">À partir de 7 nuits</div>
+        <div class="amt">230 € / nuit</div>
+        <ul class="pl">
+          <li>✦ <span data-i18n="price.l2a">Le tarif le plus avantageux</span></li>
+          <li>✦ <span data-i18n="price.l2b">Minimum 7 nuits en été (juil.–août)</span></li>
+          <li>✦ <span data-i18n="price.l2c">Le temps de vraiment se poser</span></li>
         </ul>
-        <a href="#form" class="block text-center bg-white text-forest text-sm font-medium px-6 py-3 rounded hover:bg-beige-light transition-all">Demander ces dates</a>
       </div>
+    </div>
+    <div class="price-note reveal">
+      <span>✓ <span data-i18n="price.n1">Chien accepté gratuitement</span></span>
+      <span>✓ <span data-i18n="price.n2">Forfait préparation du gîte : 90 €</span></span>
+      <span>✓ <span data-i18n="price.n3">Taxe de séjour incluse</span></span>
+      <span>✓ <span data-i18n="price.n4">Hors saison sur demande</span></span>
+    </div>
 
-      <div class="pricing-card border border-beige rounded-2xl p-8">
-        <p class="text-sage text-xs uppercase tracking-widest mb-1">Haute saison</p>
-        <p class="text-dk/50 text-xs mb-5">Juillet → Août · fêtes</p>
-        <div class="font-serif text-5xl text-dk">1 190 €</div>
-        <div class="text-dk/40 text-sm mb-6">/ semaine</div>
-        <ul class="space-y-2 text-sm text-dk/70 mb-8">
-          <li><span class="text-sage mr-1">✦</span>Le verger gorgé de soleil</li>
-          <li><span class="text-sage mr-1">✦</span>Marchés & festivals du Perche</li>
-          <li><span class="text-sage mr-1">✦</span>Samedi → samedi</li>
-        </ul>
-        <a href="#form" class="block text-center border border-forest text-forest text-sm font-medium px-6 py-3 rounded hover:bg-forest hover:text-white transition-all">Demander ces dates</a>
+    <div class="conditions reveal">
+      <h4 data-i18n="cond.h">Bon à savoir avant de réserver</h4>
+      <ul class="cond-list">
+        <li>
+          <span class="cond-ic">🗓️</span>
+          <div><strong data-i18n="cond1.h">Période de location</strong><p data-i18n="cond1.p">La maison se loue de début mai à fin septembre. En dehors de cette période, c'est possible sur simple demande.</p></div>
+        </li>
+        <li>
+          <span class="cond-ic">🌙</span>
+          <div><strong data-i18n="cond2.h">Durée du séjour</strong><p data-i18n="cond2.p">Minimum 4 nuits sur la saison, et 7 nuits minimum pendant l'été (juillet–août).</p></div>
+        </li>
+        <li>
+          <span class="cond-ic">🔑</span>
+          <div><strong data-i18n="cond3.h">Arrivée libre</strong><p data-i18n="cond3.p">Aucun jour d'arrivée imposé : vous arrivez et repartez le jour qui vous arrange.</p></div>
+        </li>
+        <li>
+          <span class="cond-ic">🏡</span>
+          <div><strong data-i18n="cond4.h">Maison privatisée</strong><p data-i18n="cond4.p">Le tarif s'entend pour la maison entièrement privatisée — jusqu'à 6 personnes, rien que pour vous.</p></div>
+        </li>
+        <li>
+          <span class="cond-ic">🐶</span>
+          <div><strong data-i18n="cond5.h">Chien bienvenu</strong><p data-i18n="cond5.p">Votre compagnon à quatre pattes est accepté gratuitement.</p></div>
+        </li>
+        <li>
+          <span class="cond-ic">🧺</span>
+          <div><strong data-i18n="cond7.h">Forfait préparation du gîte</strong><p data-i18n="cond7.p">Un forfait obligatoire de 90 € couvre le ménage, le linge, les draps et les lits faits à votre arrivée. La taxe de séjour est incluse dans le tarif.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- STEPS -->
+    <div style="margin-top:76px" class="reveal">
+      <div class="head center" style="margin-bottom:42px">
+        <span class="overline center" data-i18n="steps.over">Simple comme bonjour</span>
+        <h3 style="font-size:clamp(24px,3.4vw,38px)" data-i18n="steps.h">Réserver en 3 étapes</h3>
+        <p style="color:var(--ink-soft); font-size:15px; margin-top:8px" data-i18n="steps.sub">au meilleur prix</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3 data-i18n="step1.h">Vous demandez</h3><p data-i18n="step1.p">Choisissez vos dates et envoyez votre demande via le formulaire ou par téléphone au +33 6 51 61 57 59 ou par mail : leclosdelafuie@gmail.com. 
+Réponse sous 24 h, toujours par une vraie personne — Aurélie.</p></div>
+        <div class="step"><h3 data-i18n="step2.h">On confirme</h3><p data-i18n="step2.p">On valide ensemble les dates et le détail du séjour. On convient du mode de paiement (chèque ou virement). Un acompte de 50 % réserve la maison ; le solde un mois avant l'arrivée. 
+Pour vous faire patienter, Aurélie vous envoie un premier livret : ses suggestions / coups de coeur</p></div>
+        <div class="step"><h3 data-i18n="step3.h">Vous profitez</h3><p data-i18n="step3.p">Remise des clés sur place, conseils de la région, et la maison rien que pour vous. Annulation gratuite jusqu'à 30 jours avant.
+Si annulation réalisée moins de 30 jours avant la date de début du séjour : la totalité du paiement restera acquise au Clos de la Fuie. </p></div>
       </div>
     </div>
 
-    <!-- Inclusions -->
-    <div class="flex flex-wrap justify-center gap-6 text-sm text-dk/65 py-6 border-y border-beige mb-14">
-      <span><span class="text-forest">✓</span> Linge & draps inclus</span>
-      <span><span class="text-forest">✓</span> Ménage final en option (90 €)</span>
-      <span><span class="text-forest">✓</span> Caution 500 €</span>
-      <span><span class="text-forest">✓</span> Taxe de séjour en sus</span>
-    </div>
-
-    <!-- Calendar -->
-    <div class="mb-14">
-      <h3 class="font-serif text-2xl mb-2 text-dk">Disponibilités — Été 2026</h3>
-      <p class="text-dk/55 text-sm mb-6">Les semaines se louent du samedi au samedi. Cliquez sur une semaine libre pour l'ajouter à votre demande.</p>
-      <div class="flex gap-5 mb-5 text-xs text-dk/60">
-        <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded bg-green-100 border border-green-300"></span>Disponible</span>
-        <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded bg-gray-100 border border-gray-200"></span>Réservé</span>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="col-span-2 md:col-span-4 text-xs font-semibold text-dk/40 uppercase tracking-widest mt-2 mb-1">Juillet 2026</div>
-        <div class="cal-week avail" onclick="pickWeek(this,'5 juil. → 12 juil.')">5 juil. → 12 juil.</div>
-        <div class="cal-week taken">12 juil. → 19 juil.</div>
-        <div class="cal-week taken">19 juil. → 26 juil.</div>
-        <div class="cal-week avail" onclick="pickWeek(this,'26 juil. → 2 août')">26 juil. → 2 août</div>
-        <div class="col-span-2 md:col-span-4 text-xs font-semibold text-dk/40 uppercase tracking-widest mt-4 mb-1">Août 2026</div>
-        <div class="cal-week taken">2 août → 9 août</div>
-        <div class="cal-week avail" onclick="pickWeek(this,'9 août → 16 août')">9 août → 16 août</div>
-        <div class="cal-week avail" onclick="pickWeek(this,'16 août → 23 août')">16 août → 23 août</div>
-        <div class="cal-week taken">23 août → 30 août</div>
-      </div>
-      <div id="week-sel" class="mt-4 text-sm text-forest font-medium hidden">✓ Semaine sélectionnée : <span id="week-lbl"></span></div>
-    </div>
-
-    <!-- Steps -->
-    <div class="grid md:grid-cols-3 gap-4 mb-14">
-      <div class="text-center p-6">
-        <div class="w-11 h-11 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 font-serif text-lg text-forest">1</div>
-        <h4 class="font-serif text-lg mb-2">Vous demandez</h4>
-        <p class="text-dk/55 text-sm">Choisissez vos dates et envoyez votre demande. Réponse sous 24 h, toujours par Aurélie.</p>
-      </div>
-      <div class="text-center p-6">
-        <div class="w-11 h-11 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 font-serif text-lg text-forest">2</div>
-        <h4 class="font-serif text-lg mb-2">On confirme</h4>
-        <p class="text-dk/55 text-sm">On valide les dates ensemble. Un acompte de 30 % réserve la maison ; solde un mois avant.</p>
-      </div>
-      <div class="text-center p-6">
-        <div class="w-11 h-11 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 font-serif text-lg text-forest">3</div>
-        <h4 class="font-serif text-lg mb-2">Vous profitez</h4>
-        <p class="text-dk/55 text-sm">Remise des clés sur place, conseils région. Annulation gratuite jusqu'à 30 jours avant.</p>
-      </div>
-    </div>
-
-    <!-- Form -->
-    <div id="form" class="bg-beige-light rounded-2xl p-8 md:p-12">
-      <h3 class="font-serif text-3xl text-dk mb-1">Votre demande</h3>
-      <p class="text-dk/55 text-sm mb-6">Dites-nous qui vous êtes et quand vous aimeriez venir. Aucune carte bancaire à ce stade — juste le début d'une conversation.</p>
-      <div class="flex flex-wrap gap-4 text-sm text-dk/65 mb-6">
-        <span><span class="text-forest">✓</span> Réponse sous 24 h</span>
-        <span><span class="text-forest">✓</span> Sans engagement</span>
-        <span><span class="text-forest">✓</span> Annulation flexible</span>
-      </div>
-      <div class="flex flex-wrap gap-3 mb-8 text-sm">
-        <a href="https://www.airbnb.fr" target="_blank" class="inline-flex items-center gap-2 border border-dk/15 bg-white px-4 py-2 rounded hover:border-forest transition-colors text-dk/70">★ Voir sur Airbnb</a>
-        <a href="https://www.booking.com" target="_blank" class="inline-flex items-center gap-2 border border-dk/15 bg-white px-4 py-2 rounded hover:border-forest transition-colors text-dk/70">◆ Voir sur Booking</a>
-        <a href="mailto:leclosdelafuie@gmail.com" class="inline-flex items-center gap-2 border border-dk/15 bg-white px-4 py-2 rounded hover:border-forest transition-colors text-dk/70">✉ leclosdelafuie@gmail.com</a>
-      </div>
-      <form onsubmit="submitForm(event)" class="grid md:grid-cols-2 gap-5">
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Prénom</label><input type="text" required placeholder="Prénom" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm transition-colors"></div>
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Nom</label><input type="text" required placeholder="Nom" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm transition-colors"></div>
-        <div class="md:col-span-2"><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">E-mail</label><input type="email" required placeholder="vous@exemple.fr" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm transition-colors"></div>
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Arrivée</label><input type="date" id="date-arr" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm transition-colors"></div>
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Départ</label><input type="date" id="date-dep" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm transition-colors"></div>
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Voyageurs</label><select class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm"><option>2 adultes</option><option selected>2 adultes + 2 enfants</option><option>2 adultes + 3 enfants</option><option>4 adultes</option><option>4 adultes + 2 enfants</option><option>6 adultes</option></select></div>
-        <div><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Saison repérée</label><select id="saison" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm"><option>À déterminer</option><option>Basse saison (690 €/sem.)</option><option>Moyenne saison (890 €/sem.)</option><option>Haute saison (1 190 €/sem.)</option></select></div>
-        <div class="md:col-span-2"><label class="block text-xs font-medium text-dk mb-1.5 uppercase tracking-wider">Message (facultatif)</label><textarea rows="4" placeholder="Parlez-nous de votre famille, vos envies, vos questions…" class="w-full border border-beige bg-white px-4 py-3 rounded focus:outline-none focus:border-forest text-sm resize-none transition-colors"></textarea></div>
-        <div class="md:col-span-2">
-          <button id="submit-btn" type="submit" class="bg-forest text-white font-semibold px-10 py-4 rounded hover:bg-forest-dark transition-all text-sm">Envoyer ma demande →</button>
-          <p class="text-dk/35 text-xs mt-3">En envoyant, vous acceptez d'être recontacté·e par Aurélie. Vos données restent confidentielles.</p>
+    <!-- BOOKING FORM -->
+    <div class="book" style="margin-top:76px">
+      <div class="book-intro reveal">
+        <span class="overline" data-i18n="book.over">Votre demande</span>
+        <h3 style="font-size:clamp(26px,3.6vw,40px); margin-top:14px" data-i18n="book.h">Parlons de vos vacances</h3>
+        <p style="color:var(--ink-soft); margin-top:16px; max-width:42ch" data-i18n="book.p">Dites-nous qui vous êtes et quand vous aimeriez venir. Aucune carte bancaire à ce stade — juste le début d'une conversation.</p>
+        <div class="chips">
+          <span class="chip">✓ <span data-i18n="book.c1">Réponse sous 24 h</span></span>
+          <span class="chip">✓ <span data-i18n="book.c2">Sans engagement</span></span>
+          <span class="chip">✓ <span data-i18n="book.c3">Votre livret de suggestions dès la confirmation de votre réservation</span></span>
         </div>
+        <div class="extlink">
+          <a class="extbtn" href="mailto:leclosdelafuie@gmail.com">✉ leclosdelafuie@gmail.com</a>
+        </div>
+      </div>
+
+      <form class="form reveal d1" id="bookForm">
+        <h3 data-i18n="form.h">Demander ces dates</h3>
+        <p class="fsub" data-i18n="form.sub">La maison entière · 6 personnes · 3 chambres</p>
+        <div class="row2">
+          <div class="field"><label data-i18n="form.first">Prénom</label><input type="text" name="first" required></div>
+          <div class="field"><label data-i18n="form.last">Nom</label><input type="text" name="last" required></div>
+        </div>
+        <div class="field"><label data-i18n="form.email">E-mail</label><input type="email" name="email" required placeholder="vous@exemple.fr"></div>
+        <div class="row2">
+          <div class="field"><label data-i18n="form.arrive">Arrivée</label><input type="date" name="arrive" id="fArrive"></div>
+          <div class="field"><label data-i18n="form.depart">Départ</label><input type="date" name="depart" id="fDepart"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label data-i18n="form.guests">Voyageurs</label>
+            <select name="guests">
+              <option>2 adultes</option><option>2 adultes + 1 enfant</option>
+              <option selected>2 adultes + 2 enfants</option><option>4 adultes + 2 enfants</option>
+              <option data-i18n="form.g6">6 personnes</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="form.season">Durée envisagée</label>
+            <select name="season" id="fSeason">
+              <option data-i18n="form.snone">À déterminer</option>
+              <option data-i18n="form.sd1">4 à 6 nuits — 240 €/nuit</option>
+              <option data-i18n="form.sd2">7 nuits et plus — 220 €/nuit</option>
+              <option data-i18n="form.sd3">Hors saison — sur demande</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label data-i18n="form.msg">Votre message <span style="font-weight:400;color:var(--sage)">(facultatif)</span></label><textarea name="msg" placeholder="Parlez-nous de votre famille, vos envies, vos questions…"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" data-i18n="form.submit">Envoyer ma demande <span class="arrow">→</span></button>
+        <p class="priv" data-i18n="form.priv">En envoyant, vous acceptez d'être recontacté·e par Aurélie. Vos données restent confidentielles.</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- HOST -->
-<section class="py-20 px-6 bg-forest text-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-14 items-center">
+<!-- ===================== HOST ===================== -->
+<section class="section bg-sand" id="hote">
+  <div class="wrap">
+    <div class="host">
+      <div class="host-media reveal">
+        <img src="images/hosts-2.jpg" alt="Aurélie, votre hôte et guide locale">
+        <div class="stamp"><b>+12 ANS</b><span data-i18n="host.stamp">à vous accueillir</span></div>
+      </div>
+      <div class="host-body reveal d1">
+        <span class="overline" data-i18n="host.over">Votre hôte</span>
+        <h2 style="font-size:clamp(28px,4vw,46px); margin-top:14px" data-i18n="host.h">Aurélie, guide locale &amp; gardienne des lieux</h2>
+        <p style="color:var(--ink-soft); margin-top:18px" data-i18n="host.p1">J'ai grandi tout près du Perche sur les bords de l'Eure dans une famille qui travaillait le bois depuis toujours : compagnon charpentier,  restaurateur de moulins. C'est dans l'atelier de mon père et sur les chantiers, au contact des vieilles poutres et des savoir-faire d'autrefois, que j'ai appris à regarder les pierres autrement.<br>  
+Il y a plus de 12 ans, j'ai posé mes valises à La Perrière avec ma famille. Je suis devenue guide du village, par passion, autant que par évidence. Je connais chaque chemin creux, chaque marché et chaque adresse gourmande des environs. 
+<br>Le Clos de la Fuie, c'est notre maison de famille que j'ouvre aux vôtres — avec le souci du détail et l'envie sincère de vous faire aimer mon territoire.</p>
+        <p class="sig" data-i18n="host.sig">« Vous repartirez avec des souvenirs plein la tête — et l'envie de revenir. »</p>
+        <div class="host-stats">
+          <div><div class="n">20+</div><div class="l" data-i18n="host.s1">familles accueillies</div></div>
+          <div style="text-align:center"><div class="n" style="color:var(--terracotta)">♥</div><div class="l" data-i18n="host.s4">Coup de cœur voyageurs sur Airbnb</div></div>
+          <div><div class="n">5/5</div><div class="l" data-i18n="host.s2">note moyenne</div></div>
+          <div><div class="n">
+</div><div class="l" data-i18n="host.s3">
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TERRITOIRE ===================== -->
+<section class="section" id="territoire">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="overline"><span class="section-num">04</span> &nbsp;<span data-i18n="region.over">Le Perche &amp; La Perrière</span></span>
+      <span class="kicker" data-i18n="region.kicker">Bienvenue dans l'un des plus beaux coins de France</span>
+      <h2 data-i18n="region.h2">C'est quoi, le Perche ?</h2>
+      <p class="lead" data-i18n="region.lead">Imaginez un pays de collines douces, de forêts profondes et de manoirs cachés, à seulement 2 h de Paris. Le Perche, c'est la campagne française telle qu'on la rêve — vallonnée, verte, préservée. Ici, pas de foule : juste le chant des oiseaux, les chemins creux et le temps qui ralentit.</p>
+    </div>
+
+    <div class="terr-split reveal">
+      <div class="terr-media">
+        <img src="images/perche-view.jpg" alt="Les forêts et collines du Perche">
+        <span class="cap" data-i18n="terr.cap1">Le bocage et les forêts du Perche</span>
+      </div>
+      <div class="terr-body">
+        <span class="kicker" data-i18n="terr.k1">Un Parc naturel régional</span>
+        <h3 data-i18n="terr.h1">Une nature préservée, à perte de vue</h3>
+        <p data-i18n="terr.p1">Classé Parc naturel régional, le Perche déroule ses forêts domaniales, ses haies bocagères et ses rivières à truites. On y vient pour randonner, observer les cerfs au petit matin, cueillir des champignons à l'automne ou simplement respirer. Les manoirs du XVᵉ siècle ponctuent les vallons, témoins d'une histoire riche — c'est aussi d'ici que partirent les Percherons, ces célèbres chevaux de trait.</p>
+        <div class="terr-stats">
+          <div class="ts"><b>2 h</b><span data-i18n="terr.s1">de Paris, porte à porte</span></div>
+          <div class="ts"><b>1998</b><span data-i18n="terr.s2">Parc naturel régional</span></div>
+          <div class="ts"><b>+200</b><span data-i18n="terr.s3">manoirs et logis anciens</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="terr-split rev reveal">
+      <div class="terr-media">
+        <img src="images/perriere-pano.jpg" alt="Le village de La Perrière, perché sur son éperon">
+        <span class="cap" data-i18n="terr.cap2">La Perrière, perchée sur son éperon</span>
+      </div>
+      <div class="terr-body">
+        <span class="kicker" data-i18n="terr.k2">Notre village · 220 habitants</span>
+        <h3 data-i18n="terr.h2">La Perrière, la perle du Perche</h3>
+        <p data-i18n="terr.p2">Perché sur un éperon rocheux à 250 m d'altitude, notre village de seulement 220 habitants veille sur la campagne à des kilomètres à la ronde. Ruelles fleuries, maisons de pierre, ateliers d'artistes et points de vue à couper le souffle : La Perrière a tout d'un décor de carte postale — et c'est pourtant un vrai village percheron vivant, classé Petite Cité de Caractère avec une épicerie, une boulangerie et 3 restaurants. Le Clos de la Fuie se niche en son cœur, juste en face la célèbre Maison d'Horbé.</p>
+        <div class="terr-stats">
+          <div class="ts"><b>220</b><span data-i18n="terr.s4">habitants seulement</span></div>
+          <div class="ts"><b>250 m</b><span data-i18n="terr.s5">d'altitude, vue panoramique</span></div>
+          <div class="ts"><b>0 min</b><span data-i18n="terr.s6">à pied jusqu'aux commerces</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="head reveal" style="margin-top:clamp(56px,7vw,84px)">
+      <span class="kicker" data-i18n="terr.k3">À faire tout autour</span>
+      <h3 style="font-size:clamp(24px,3.2vw,34px); color:var(--forest-700)" data-i18n="terr.h3">Les coups de cœur d'Aurélie</h3>
+    </div>
+
+    <div class="region-grid reveal d1" style="margin-top:36px">
+      <div class="region-card r-a"><img src="images/randonnee-famille.jpg" alt="En famille sur un chemin creux du Perche"><div class="rc"><div class="k" data-i18n="reg1.k">Nature</div><h3 data-i18n="reg1.h">Randonnées &amp; forêts</h3><p data-i18n="reg1.p">La forêt de Bellême et ses sentiers, à quelques minutes — idéal pour une grande balade en famille.</p></div></div>
+      <div class="region-card r-b"><img src="images/village-perriere.jpg" alt="La place de La Perrière et le Café La Perrière"><div class="rc"><div class="k" data-i18n="reg2.k">À pied</div><h3 data-i18n="reg2.h">Le village</h3><p data-i18n="reg2.p">Ruelles fleuries, ateliers d'art et points de vue.</p></div></div>
+      <div class="region-card r-c"><img src="images/manoir-soisay.jpg" alt="Le manoir de Soisay"><div class="rc"><div class="k" data-i18n="reg3.k">Patrimoine</div><h3 data-i18n="reg3.h">Manoirs &amp; châteaux</h3><p data-i18n="reg3.p">Le manoir de Soisay, témoin Renaissance du bocage percheron.</p></div></div>
+      <div class="region-card r-d"><img src="images/brocante.jpg" alt="Brocantes du Perche"><div class="rc"><div class="k" data-i18n="reg4.k">Chiner</div><h3 data-i18n="reg4.h">Brocantes</h3></div></div>
+      <div class="region-card r-e"><img src="images/producteurs.jpg" alt="Producteurs locaux"><div class="rc"><div class="k" data-i18n="reg5.k">Saveurs</div><h3 data-i18n="reg5.h">Producteurs</h3></div></div>
+      <div class="region-card r-f"><img src="images/cheval-percheron.jpg" alt="L'authentique cheval percheron" style="object-position:65% 28%"><div class="rc"><div class="k" data-i18n="reg6.k">Tradition</div><h3 data-i18n="reg6.h">L'authentique cheval percheron</h3></div></div>
+    </div>
+
+    <div class="tips" id="tips"></div>
+  </div>
+</section>
+
+<!-- ===================== AVIS ===================== -->
+<section class="section bg-linen2" id="avis">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <div class="head" style="margin:0">
+        <span class="overline"><span class="section-num">05</span> &nbsp;<span data-i18n="rev.over">Avis Clients</span></span>
+        <h2 data-i18n="rev.h2">Ils ont posé leurs valises ici</h2>
+      </div>
+      <div class="rating-badge">
+        <div class="rb-score">5,0</div>
+        <div class="rb-body">
+          <div class="rb-stars">★★★★★</div>
+          <div class="rb-cnt" data-i18n="rev.count">Coup de Cœur voyageurs · 10 avis 5★ sur Airbnb</div>
+          <div class="rb-src"><span>Airbnb</span><span>Google</span><span>Livre d'or</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews" id="reviews"></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="head center reveal" style="margin-bottom:36px">
+      <span class="overline center" data-i18n="faq.over">Questions fréquentes</span>
+      <h2 data-i18n="faq.h2">Tout ce qu'il faut savoir</h2>
+      <div class="sep"><span class="dia"></span></div>
+    </div>
+    <div class="faq reveal d1" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ===================== JOURNAL / BLOG ===================== -->
+<section class="section bg-sand journal" id="journal">
+  <div class="wrap">
+    <div class="journal-head reveal">
+      <div class="head" style="margin:0">
+        <span class="overline" data-i18n="journal.over">Le journal du Clos</span>
+        <h2 data-i18n="journal.h">Le Perche, raconté par Aurélie</h2>
+        <p class="lead" data-i18n="journal.lead">Patrimoine, balades, bonnes adresses et histoires du pays : retrouvez tous nos articles sur le blog du Clos de la Fuie.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://leclosdelafuie.fr/blogperchepatrimoines/" target="_blank" rel="noopener" data-i18n="journal.all">Tous les articles <span class="arrow">→</span></a>
+    </div>
+
+    <div class="journal-grid reveal d1">
+      <a class="jcard" href="articles/le-clos-chez-aurelie-francois.html">
+        <span class="jc-media"><img src="images/real-garden-wide.jpg" alt="Le Clos de la Fuie, chez Aurélie et François"></span>
+        <span class="jc-body">
+          <span class="jc-k" data-i18n="jr1.k">La maison</span>
+          <span class="jc-h" data-i18n="jr1.h">Le Clos de la Fuie, chez Aurélie &amp; François</span>
+          <span class="jc-more" data-i18n="journal.read">Lire l'article →</span>
+        </span>
+      </a>
+      <a class="jcard" href="articles/au-coeur-du-perche.html">
+        <span class="jc-media"><img src="images/perche-view.jpg" alt="Au cœur du Perche"></span>
+        <span class="jc-body">
+          <span class="jc-k" data-i18n="jr2.k">Le territoire</span>
+          <span class="jc-h" data-i18n="jr2.h">Au cœur du Perche</span>
+          <span class="jc-more" data-i18n="journal.read">Lire l'article →</span>
+        </span>
+      </a>
+      <a class="jcard" href="articles/la-perriere.html">
+        <span class="jc-media"><img src="images/perriere-pano.jpg" alt="La Perrière, perle du Perche"></span>
+        <span class="jc-body">
+          <span class="jc-k" data-i18n="jr3.k">Le village</span>
+          <span class="jc-h" data-i18n="jr3.h">La Perrière, perle du Perche</span>
+          <span class="jc-more" data-i18n="journal.read">Lire l'article →</span>
+        </span>
+      </a>
+      <a class="jcard" href="articles/le-perche-sous-la-pluie.html">
+        <span class="jc-media"><img src="images/real-gameroom.jpg" alt="Que faire dans le Perche quand il pleut"></span>
+        <span class="jc-body">
+          <span class="jc-k" data-i18n="jr4.k">Bons plans</span>
+          <span class="jc-h" data-i18n="jr4.h">Le Perche sous la pluie : nos incontournables</span>
+          <span class="jc-more" data-i18n="journal.read">Lire l'article →</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section class="insta">
+  <div class="wrap insta-inner reveal">
+    <a class="insta-logo" href="https://www.instagram.com/leclosdelafuie/" target="_blank" rel="noopener" aria-label="Instagram leclosdelafuie">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <div class="insta-text">
+      <span class="overline" data-i18n="insta.over">Suivez la vie du Clos</span>
+      <h2 data-i18n="insta.h">Le Perche au fil des saisons, sur Instagram</h2>
+      <p data-i18n="insta.p">Le verger en fleurs, les bons plans d'Aurélie, les coulisses de la maison et les petits bonheurs du quotidien. Abonnez-vous pour ne rien manquer — et laissez-vous donner envie.</p>
+    </div>
+    <a class="insta-cta" href="https://www.instagram.com/leclosdelafuie/" target="_blank" rel="noopener">
+      <span class="ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+      <span class="hd">@leclosdelafuie</span>
+      <span class="fl" data-i18n="insta.follow">Suivre</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="cta-band">
+  <div class="reveal">
+    <span class="overline center" style="color:var(--sage)" data-i18n="final.over">Été 2026</span>
+    <h2 style="margin-top:18px" data-i18n="final.h">Et si vos prochaines vacances commençaient ici ?</h2>
+    <p class="lead" data-i18n="final.p">Quelques semaines sont encore libres cet été. Envoyez votre demande aujourd'hui — Aurélie vous répond sous 24 h.</p>
+    <div class="btns">
+      <a href="#reserver" class="btn btn-light btn-lg" data-i18n="final.cta1">Vérifier les disponibilités <span class="arrow">→</span></a>
+      <a href="mailto:leclosdelafuie@gmail.com" class="btn btn-cream-ghost btn-lg" data-i18n="final.cta2">Écrire à Aurélie</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
       <div>
-        <p class="text-white/50 text-xs uppercase tracking-widest mb-3">Votre hôte</p>
-        <h2 class="font-serif text-4xl mb-1">Aurélie,</h2>
-        <h3 class="font-serif text-2xl text-white/70 mb-6">guide locale & gardienne des lieux</h3>
-        <p class="text-white/65 leading-relaxed mb-6">Native du Perche et guide-conférencière de métier, je connais chaque chemin creux, chaque marché et chaque adresse gourmande des environs. Le Clos de la Fuie, c'est la maison de famille que j'ouvre aux vôtres — avec le souci du détail et l'envie de vous faire aimer mon territoire.</p>
-        <blockquote class="font-serif text-xl italic text-white/85 border-l-2 border-white/25 pl-5">« Vous repartirez avec des souvenirs plein la tête — et l'envie de revenir. »</blockquote>
-      </div>
-      <div>
-        <div class="grid grid-cols-3 gap-6 mb-8 text-center">
-          <div><div class="font-serif text-4xl mb-1">8</div><div class="text-white/50 text-xs">ans à vous<br>accueillir</div></div>
-          <div><div class="font-serif text-4xl mb-1">120+</div><div class="text-white/50 text-xs">familles<br>accueillies</div></div>
-          <div><div class="font-serif text-4xl mb-1">98%</div><div class="text-white/50 text-xs">recommandent</div></div>
-        </div>
-        <div class="aspect-[3/2] rounded-xl img-ph overflow-hidden">
-          <div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-5xl mb-2">👩</div><div class="text-sm">Photo d'Aurélie</div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 04 TERRITOIRE -->
-<section id="territoire" class="py-24 px-6 bg-warm-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-start gap-4 mb-16">
-      <span class="sec-num">04</span>
-      <div class="pt-3">
-        <p class="text-sage text-xs uppercase tracking-widest mb-2 font-medium">Le Territoire</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-dk leading-tight">Le Perche,<br><em>à explorer pas à pas</em></h2>
-        <p class="text-dk/55 mt-4 max-w-xl text-sm leading-relaxed">Forêts, manoirs, marchés et villages classés : l'un des plus beaux coins de Normandie commence au pas de la porte. Voici les recommandations d'Aurélie.</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🌲</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">Nature</span><h3 class="font-serif text-base mt-2 mb-1">Randonnées & forêts</h3><p class="text-dk/55 text-xs">La forêt de Bellême et ses sentiers, à quelques minutes.</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🏘️</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">À pied</span><h3 class="font-serif text-base mt-2 mb-1">La Perrière</h3><p class="text-dk/55 text-xs">Petite Cité de Caractère perchée sur sa colline.</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🏰</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">Patrimoine</span><h3 class="font-serif text-base mt-2 mb-1">Manoirs & châteaux</h3><p class="text-dk/55 text-xs">Le manoir de Courboyer, cœur du Parc régional.</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🥕</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">Gourmand</span><h3 class="font-serif text-base mt-2 mb-1">Marchés</h3><p class="text-dk/55 text-xs">Producteurs locaux, saveurs du terroir.</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🧀</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">Saveurs</span><h3 class="font-serif text-base mt-2 mb-1">Producteurs</h3><p class="text-dk/55 text-xs">Fromages, cidres et charcuteries artisanaux.</p></div>
-      <div><div class="aspect-[4/3] img-ph rounded-xl overflow-hidden mb-3"><div class="w-full h-full flex items-center justify-center text-dk/25 text-center"><div><div class="text-4xl mb-1">🌾</div></div></div></div><span class="text-xs bg-beige px-2 py-0.5 rounded text-dk/55">Évasion</span><h3 class="font-serif text-base mt-2 mb-1">Le bocage</h3><p class="text-dk/55 text-xs">Haies centenaires et collines douces du Perche.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 AVIS -->
-<section id="avis" class="py-24 px-6" style="background:#F0EBE3;">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-start gap-4 mb-12">
-      <span class="sec-num">05</span>
-      <div class="pt-3">
-        <p class="text-sage text-xs uppercase tracking-widest mb-2 font-medium">Avis Clients</p>
-        <h2 class="font-serif text-4xl text-dk">Ils ont posé leurs valises ici</h2>
-        <div class="flex items-center gap-4 mt-4">
-          <span class="font-serif text-5xl text-dk">4,9</span>
-          <div><div class="stars text-xl">★★★★★</div><div class="text-dk/50 text-sm">sur 87 avis · Airbnb & Booking</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="grid md:grid-cols-3 gap-5 mb-10">
-      <div class="bg-white rounded-xl p-6"><div class="stars mb-3">★★★★★</div><p class="text-dk/75 text-sm leading-relaxed italic mb-5">« Une maison magnifique, un jardin extraordinaire. Les enfants n'ont pas voulu repartir. On revient l'année prochaine ! »</p><div class="flex items-center gap-3"><div class="w-8 h-8 bg-beige rounded-full flex items-center justify-center text-xs font-semibold text-dk/60">ML</div><div><div class="text-sm font-medium text-dk">Marie-Laure</div><div class="text-xs text-dk/40">Août 2025 · Airbnb</div></div></div></div>
-      <div class="bg-white rounded-xl p-6"><div class="stars mb-3">★★★★★</div><p class="text-dk/75 text-sm leading-relaxed italic mb-5">« Aurélie est une hôte exceptionnelle. Ses conseils sur la région sont précieux. La maison est encore plus belle qu'en photos. »</p><div class="flex items-center gap-3"><div class="w-8 h-8 bg-beige rounded-full flex items-center justify-center text-xs font-semibold text-dk/60">TG</div><div><div class="text-sm font-medium text-dk">Thomas & Gaëlle</div><div class="text-xs text-dk/40">Juillet 2025 · Booking</div></div></div></div>
-      <div class="bg-white rounded-xl p-6"><div class="stars mb-3">★★★★★</div><p class="text-dk/75 text-sm leading-relaxed italic mb-5">« La cabane a rendu nos enfants complètement fous. Le jardin clos est idéal. Séjour parfait, on recommande vivement. »</p><div class="flex items-center gap-3"><div class="w-8 h-8 bg-beige rounded-full flex items-center justify-center text-xs font-semibold text-dk/60">SB</div><div><div class="text-sm font-medium text-dk">Sophie B.</div><div class="text-xs text-dk/40">Juin 2025 · Airbnb</div></div></div></div>
-    </div>
-    <div class="text-center"><a href="https://www.airbnb.fr" target="_blank" class="inline-flex items-center gap-2 text-sm text-forest border border-forest px-6 py-3 rounded hover:bg-forest hover:text-white transition-all">Voir tous les avis →</a></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-24 px-6 bg-warm-white">
-  <div class="max-w-2xl mx-auto">
-    <div class="text-center mb-12">
-      <p class="text-sage text-xs uppercase tracking-widest mb-3 font-medium">FAQ</p>
-      <h2 class="font-serif text-4xl text-dk">Questions fréquentes</h2>
-      <p class="text-dk/50 mt-2 text-sm">Tout ce qu'il faut savoir</p>
-    </div>
-    <div class="space-y-3">
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Quels sont les horaires d'arrivée et de départ ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">Arrivée à partir de 16 h, départ avant 10 h. En dehors de la haute saison, les horaires peuvent être adaptés selon les disponibilités.</p></div>
-      </div>
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Les animaux sont-ils acceptés ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">Les animaux sont acceptés sur demande. Mentionnez-le dans votre message — un léger supplément pour le ménage peut s'appliquer.</p></div>
-      </div>
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Quelle est la durée minimum de séjour ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">En haute saison, 7 nuits minimum (samedi → samedi). En basse et moyenne saison, des courts séjours à partir de 3 nuits sont possibles.</p></div>
-      </div>
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Y a-t-il du matériel bébé disponible ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">Oui, un lit bébé et une chaise haute peuvent être mis à disposition sur demande. À mentionner lors de votre demande de réservation.</p></div>
-      </div>
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Comment se gare-t-on ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">Parking privatif gratuit sur la propriété (2–3 véhicules). Des places supplémentaires sont disponibles sur la place du village.</p></div>
-      </div>
-      <div class="border border-beige rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex justify-between items-center hover:bg-beige-light transition-colors"><span class="font-medium text-dk text-sm pr-4">Quelle est la politique d'annulation ?</span><span class="faq-icon text-sage text-xl flex-shrink-0 transition-transform">+</span></button>
-        <div class="faq-body px-5"><p class="text-dk/65 text-sm pb-5">Annulation gratuite jusqu'à 30 jours avant l'arrivée. L'acompte de 30 % peut être retenu en cas d'annulation tardive, sauf cas de force majeure.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="py-20 px-6 bg-beige-light">
-  <div class="max-w-xl mx-auto text-center">
-    <p class="text-sage text-xs uppercase tracking-widest mb-4 font-medium">Été 2026</p>
-    <h2 class="font-serif text-4xl md:text-5xl text-dk mb-6 leading-tight">Et si vos prochaines vacances<br><em>commençaient ici ?</em></h2>
-    <p class="text-dk/55 mb-10 text-sm">Quelques semaines sont encore libres cet été. Envoyez votre demande aujourd'hui — Aurélie vous répond sous 24 h.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#reserver" class="bg-forest text-white font-semibold px-8 py-4 rounded hover:bg-forest-dark transition-all text-sm">Vérifier les disponibilités →</a>
-      <a href="mailto:leclosdelafuie@gmail.com" class="border border-forest text-forest font-semibold px-8 py-4 rounded hover:bg-forest hover:text-white transition-all text-sm">Écrire à Aurélie</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-dk text-white py-16 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-4 gap-10 mb-12">
-      <div class="md:col-span-1">
-        <h3 class="font-serif text-xl mb-3">Le Clos de la Fuie</h3>
-        <p class="text-white/45 text-sm leading-relaxed">Gîte familial de charme au cœur de La Perrière, Petite Cité de Caractère du Perche. 6 personnes, 3 chambres, jardin clos & cabane. À 2 h de Paris.</p>
-        <div class="flex gap-3 mt-4">
-          <a href="#" class="text-white/40 hover:text-white transition-colors text-sm border border-white/20 px-3 py-1.5 rounded">Facebook</a>
-          <a href="#" class="text-white/40 hover:text-white transition-colors text-sm border border-white/20 px-3 py-1.5 rounded">Instagram</a>
+        <div class="brand-mark">Le Clos de la Fuie</div>
+        <p data-i18n="foot.about">Gîte familial de charme au cœur de La Perrière, Petite Cité de Caractère du Perche. 6 personnes, 3 chambres, jardin clos &amp; cabane. À 2 h de Paris.</p>
+        <div class="soc">
+          <a href="https://www.instagram.com/leclosdelafuie/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://leclosdelafuie.fr/blogperchepatrimoines/" target="_blank" rel="noopener" aria-label="Blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h11l3 3v13H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></a>
+          <a href="mailto:leclosdelafuie@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
         </div>
       </div>
       <div>
-        <h4 class="text-xs uppercase tracking-widest text-white/35 mb-4">Visiter</h4>
-        <ul class="space-y-2 text-sm text-white/60">
-          <li><a href="#maison" class="hover:text-white transition-colors">La Maison</a></li>
-          <li><a href="#jardin" class="hover:text-white transition-colors">Jardin & Cabane</a></li>
-          <li><a href="#territoire" class="hover:text-white transition-colors">Le Territoire</a></li>
-          <li><a href="#avis" class="hover:text-white transition-colors">Avis Clients</a></li>
-          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+        <h3 data-i18n="foot.visit">Visiter</h3>
+        <ul>
+          <li><a href="#maison" data-i18n="nav.house">La Maison</a></li>
+          <li><a href="#jardin" data-i18n="nav.garden">Jardin &amp; Cabane</a></li>
+          <li><a href="#territoire" data-i18n="nav.region">Le Perche</a></li>
+          <li><a href="#avis" data-i18n="nav.reviews">Avis Clients</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-xs uppercase tracking-widest text-white/35 mb-4">Réserver</h4>
-        <ul class="space-y-2 text-sm text-white/60">
-          <li><a href="#reserver" class="hover:text-white transition-colors">Tarifs & saisons</a></li>
-          <li><a href="#reserver" class="hover:text-white transition-colors">Disponibilités</a></li>
-          <li><a href="https://www.airbnb.fr" target="_blank" class="hover:text-white transition-colors">Voir sur Airbnb</a></li>
-          <li><a href="https://www.booking.com" target="_blank" class="hover:text-white transition-colors">Voir sur Booking</a></li>
+        <h3 data-i18n="foot.journal">Le journal</h3>
+        <ul>
+          <li><a href="https://leclosdelafuie.fr/blogperchepatrimoines/" target="_blank" rel="noopener" data-i18n="foot.blog">Tous les articles</a></li>
+          <li><a href="articles/le-clos-chez-aurelie-francois.html" data-i18n="jr1.h">Le Clos de la Fuie, chez Aurélie &amp; François</a></li>
+          <li><a href="articles/au-coeur-du-perche.html" data-i18n="jr2.h">Au cœur du Perche</a></li>
+          <li><a href="articles/la-perriere.html" data-i18n="foot.perriere">La Perrière</a></li>
+          <li><a href="articles/le-perche-sous-la-pluie.html" data-i18n="foot.rainy">Le Perche sous la pluie</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-xs uppercase tracking-widest text-white/35 mb-4">Contact</h4>
-        <div class="space-y-1 text-sm text-white/60">
-          <p>La Perrière</p>
-          <p>61360 · Orne, Normandie</p>
-          <a href="mailto:leclosdelafuie@gmail.com" class="hover:text-white transition-colors block mt-3 break-all">leclosdelafuie@gmail.com</a>
-          <a href="#reserver" class="inline-block mt-4 bg-white text-dk text-sm font-semibold px-5 py-2 rounded hover:bg-beige-light transition-colors">Réserver</a>
-        </div>
+        <h3 data-i18n="foot.contact">Contact</h3>
+        <p style="margin-bottom:6px"><strong style="color:var(--linen)">La Perrière</strong><br>61360 · Orne, Normandie</p>
+        <p><a href="mailto:leclosdelafuie@gmail.com">leclosdelafuie@gmail.com</a></p>
+        <a href="#reserver" class="btn btn-light btn-sm" style="margin-top:16px" data-i18n="nav.cta">Réserver</a>
       </div>
     </div>
-    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-white/30 text-xs">
-      <p>© 2026 Le Clos de la Fuie — La Perrière, Perche · Gîte familial · Location saisonnière · 6 personnes</p>
-      <p>À partir de 690 € / semaine</p>
+    <div class="footer-bot">
+      <span>© 2026 Le Clos de la Fuie — La Perrière, Perche</span>
+      <span data-i18n="foot.legal">Gîte familial · Location saisonnière · 6 personnes</span>
     </div>
   </div>
 </footer>
 
-<!-- STICKY BAR -->
-<div class="sticky-bar" id="sbar">
-  <div class="bg-forest text-white py-3 px-6 flex items-center justify-between shadow-2xl">
-    <div class="flex items-center gap-3">
-      <span class="font-serif text-base hidden sm:block">Le Clos de la Fuie</span>
-      <span class="text-white/55 text-sm">À partir de <strong class="text-white">690 €</strong> / semaine</span>
-    </div>
-    <div class="flex items-center gap-2">
-      <button class="text-white/50 hover:text-white px-2 text-lg">‹</button>
-      <a href="#reserver" class="bg-white text-forest text-sm font-semibold px-6 py-2 rounded hover:bg-beige-light transition-colors">Réserver</a>
-      <button class="text-white/50 hover:text-white px-2 text-lg">›</button>
-    </div>
-  </div>
+<!-- ===================== STICKY MOBILE CTA ===================== -->
+<div class="mobile-cta" id="mobileCta">
+  <div class="pm"><span data-i18n="mcta.from">À partir de</span> <b>220 € <span style="font-size:13px;font-weight:400;font-family:var(--sans)" data-i18n="mcta.week">/ nuit</span></b></div>
+  <a href="#reserver" class="btn btn-primary" data-i18n="nav.cta">Réserver</a>
 </div>
 
-<script>
-// Nav scroll
-const nav = document.getElementById('nav');
-const nlogo = document.getElementById('nlogo');
-const nsub = document.getElementById('nsub');
-const nlinks = document.getElementById('nlinks');
-const sbar = document.getElementById('sbar');
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-x" id="lbX" aria-label="Fermer">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
 
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  const heroH = document.getElementById('hero').offsetHeight;
-  if (y > 60) {
-    nav.classList.add('nav-scrolled');
-    nlogo.style.color = '#1E2B1E';
-    nsub.style.color = 'rgba(30,43,30,0.5)';
-    nlinks && nlinks.querySelectorAll('a').forEach(a => { a.style.color = 'rgba(30,43,30,0.65)'; });
-  } else {
-    nav.classList.remove('nav-scrolled');
-    nlogo.style.color = 'white';
-    nsub.style.color = 'rgba(255,255,255,0.6)';
-    nlinks && nlinks.querySelectorAll('a').forEach(a => { a.style.color = 'rgba(255,255,255,0.75)'; });
-  }
-  sbar.classList.toggle('show', y > heroH * 0.7);
-});
-
-// FAQ
-function toggleFaq(btn) {
-  const body = btn.nextElementSibling;
-  const icon = btn.querySelector('.faq-icon');
-  const open = body.classList.contains('open');
-  document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
-  document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
-  if (!open) { body.classList.add('open'); icon.style.transform = 'rotate(45deg)'; }
-}
-
-// Calendar
-function pickWeek(el, label) {
-  document.querySelectorAll('.cal-week.sel').forEach(w => { w.classList.remove('sel'); w.classList.add('avail'); });
-  el.classList.remove('avail'); el.classList.add('sel');
-  document.getElementById('week-lbl').textContent = label;
-  document.getElementById('week-sel').classList.remove('hidden');
-  const s = document.getElementById('saison');
-  if (s && (label.includes('juil') || label.includes('août'))) s.value = 'Haute saison (1 190 €/sem.)';
-}
-
-// Form
-function submitForm(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  btn.textContent = '✓ Demande envoyée — réponse sous 24 h';
-  btn.classList.replace('bg-forest','bg-sage');
-  btn.disabled = true;
-}
-</script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
