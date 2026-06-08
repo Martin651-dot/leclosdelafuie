@@ -251,14 +251,31 @@
   /* ---------------- booking form ---------------- */
   const form = $('#bookForm');
   if(form){
-    form.addEventListener('submit', e=>{
+    form.addEventListener('submit', async e=>{
       e.preventDefault();
-      const d = DICT[lang];
-      form.innerHTML = `<div class="form-success">
-        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="m5 12 5 5 9-11"/></svg></div>
-        <h3>${d['form.okh']}</h3>
-        <p>${d['form.okp']}</p>
-      </div>`;
+      const btn = form.querySelector('button[type=submit]');
+      btn.disabled = true;
+      const data = new FormData(form);
+      try {
+        const res = await fetch('https://formspree.io/f/xbdegvor', {
+          method:'POST', body:data, headers:{'Accept':'application/json'}
+        });
+        const json = await res.json();
+        if(json.ok){
+          const d = DICT[lang];
+          form.innerHTML = `<div class="form-success">
+            <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="m5 12 5 5 9-11"/></svg></div>
+            <h3>${d['form.okh']}</h3>
+            <p>${d['form.okp']}</p>
+          </div>`;
+        } else {
+          btn.disabled = false;
+          alert('Erreur lors de l\'envoi. Merci de nous contacter par mail : leclosdelafuie@gmail.com');
+        }
+      } catch(err){
+        btn.disabled = false;
+        alert('Erreur réseau. Merci de nous contacter par mail : leclosdelafuie@gmail.com');
+      }
     });
   }
 
