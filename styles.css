@@ -3,6 +3,9 @@
    Warm, natural, honest. Linen · sage · forest · terracotta.
    ============================================================ */
 
+/* Polices auto-hébergées — aucune donnée envoyée à Google */
+@import url('./fonts/fonts.css');
+
 :root{
   /* palette */
   --linen:      #F7F2E8;
