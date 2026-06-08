@@ -157,7 +157,7 @@ window.I18N = {
     "foot.about":"Gîte familial de charme au cœur de La Perrière, Petite Cité de Caractère du Perche. 6 personnes, 3 chambres, jardin clos & cabane. À 2 h de Paris.",
     "foot.visit":"Visiter","foot.book":"Réserver","foot.rates":"Tarifs & saisons","foot.avail":"Disponibilités",
     "foot.journal":"Le journal","foot.blog":"Tous les articles","foot.perriere":"La Perrière","foot.rainy":"Le Perche quand il pleut",
-    "foot.contact":"Contact","foot.legal":"Gîte familial · Location saisonnière · 6 personnes",
+    "foot.contact":"Contact","foot.legal":"Gîte familial · Location saisonnière · 6 personnes","foot.mentions":"Mentions légales",
 
     "mcta.from":"À partir de","mcta.week":"/ nuit"
   },
@@ -322,7 +322,7 @@ window.I18N = {
     "foot.about":"A charming family gîte in the heart of La Perrière, a listed village of character in the Perche. 6 guests, 3 bedrooms, walled garden & treehouse. 2 hrs from Paris.",
     "foot.visit":"Visit","foot.book":"Book","foot.rates":"Rates & seasons","foot.avail":"Availability",
     "foot.journal":"The journal","foot.blog":"All articles","foot.perriere":"La Perrière","foot.rainy":"The Perche when it rains",
-    "foot.contact":"Contact","foot.legal":"Family gîte · Holiday rental · sleeps 6",
+    "foot.contact":"Contact","foot.legal":"Family gîte · Holiday rental · sleeps 6","foot.mentions":"Legal notice",
 
     "mcta.from":"From","mcta.week":"/ night"
   }
