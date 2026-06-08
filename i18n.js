@@ -9,11 +9,11 @@ window.I18N = {
     "mm.house":"Chambres, pièce de vie, équipements","mm.garden":"Le jardin clos & la cabane",
     "mm.region":"Le village & la région","mm.reviews":"Ce que disent nos hôtes","mm.journal":"Le blog & nos articles","mm.conc":"Delphine, un séjour sur mesure",
 
-    "journal.over":"Le journal du Clos","journal.h":"Le Perche, raconté par Aurélie","journal.lead":"Patrimoine, balades, bonnes adresses et histoires du pays : des articles écrits par Aurélie pour mieux connaître le Perche.","journal.all":"Tous les articles","journal.read":"Lire l'article →",
+    "journal.over":"Le journal du Clos","journal.h":"Le Perche, raconté par Aurélie","journal.lead":"Patrimoine, balades, bonnes adresses et histoires du pays : retrouvez tous nos articles sur le blog du Clos de la Fuie.","journal.all":"Tous les articles","journal.read":"Lire l'article →",
     "jr1.k":"La maison","jr1.h":"Le Clos de la Fuie, chez Aurélie & François",
     "jr2.k":"Le territoire","jr2.h":"Au cœur du Perche",
     "jr3.k":"Le village","jr3.h":"La Perrière, perle du Perche",
-    "jr4.k":"Bons plans","jr4.h":"Le Perche sous la pluie : nos incontournables",
+    "jr4.k":"Bons plans","jr4.h":"Le Perche quand il pleut : nos incontournables",
 
     "hero.rating":"5 / 5 · Coup de cœur des familles sur Avis Google et Airbnb",
     "hero.h1":"Le Clos de la Fuie&nbsp;:<br><em>votre maison de campagne</em>",
@@ -52,8 +52,8 @@ window.I18N = {
     "bed1.h":"La Miroir","bed1.cfg":"1 lit 160","bed1.p":"La grande chambre parentale, avec sa bibliothèque. \nLumière du matin, cheminée d'origine et vue sur le village.","bed1.f1":"Vue village","bed1.f2":"Cheminée","bed1.f3":"Bureau",
     "bed2.h":"La Rétro Voyage","bed2.cfg":"1 LIT 140","bed2.p":"La chambre lumineuse toute la journée.\nCheminée d'origine et espace lecture douillé.","bed2.f1":"Vue jardin","bed2.f2":"Côté village",
     "bed3.h":"La Gustavienne","bed3.cfg":"1 LIT 140 + LIT 90","bed3.p":"La chambre lumineuse avec deux vues : jardin et village.\nCheminée d'origine, espace de travail et de lecture","bed3.f1":"Vue village et jardin","bed3.f2":"Bureau",
-    "qb.text":"« Ici, le temps se suspend.<br>On vit dehors, on dîne tard, les enfants courent — et Paris semble à mille lieues. »","qb.by":"Le Clos de la Fuie · La Perrière",
-    "iq.text":"« On dresse la grande table au jardin, à l'ombre des arbres — et le déjeuner s'étire, doucement, jusqu'au soir. »","iq.by":"Aurélie · Le Clos de la Fuie",
+    "qb.text":"Ici, le temps se suspend.<br>On vit dehors, on dîne tard, les enfants courent — et Paris semble à mille lieues. »","qb.by":"Le Clos de la Fuie · La Perrière",
+    "iq.text":"On dresse la grande table au jardin, à l'ombre des arbres — et le déjeuner s'étire, doucement, jusqu'au soir. »","iq.by":"Aurélie · Le Clos de la Fuie",
 
     "garden.over":"Le Jardin & la Cabane","garden.kicker":"Le temps suspendu, dehors","garden.h2":"Le vrai luxe, pour une famille : un dehors à soi",
     "garden.lead":"Le jardin, le verger et la cabane sont autant d'espaces pour se reposer, se ressourcer et s'amuser — une invitation à prendre et partager du bon temps, tout naturellement.",
@@ -104,24 +104,24 @@ window.I18N = {
     "conc.c2h":"Petits déjeuners","conc.c2p":"Viennoiseries, pain frais et produits du pays livrés au réveil pour ouvrir la journée en douceur.",
     "conc.c3h":"Baby-sitting","conc.c3p":"Une soirée en amoureux ou un dîner au village pendant que les enfants sont entre de bonnes mains.",
     "conc.c4h":"Sur mesure, à la carte","conc.c4p":"Courses à l'arrivée, panier pique-nique, réservations, petites attentions… il suffit de demander.",
-    "conc.foot":"Delphine est présente tout le séjour<br>comme un service hôtelier,<br>dans le confort d'une maison de famille.",
+    "conc.foot":"Delphine est présente tout le séjour — comme un service hôtelier, dans le confort d'une maison de famille.",
 
     "carn.over":"Exclusivité maison","carn.kicker":"Offerts à chaque réservation — introuvables ailleurs","carn.h2":"Les livrets d'Aurélie",
-    "carn.lead":"Dès votre réservation, Aurélie vous envoie ses livrets du Perche. De vraies inspirations pour découvrir le territoire selon vos goûts et vos envies : les guides qu'elle aurait aimé avoir en arrivant ici, pour décrypter le pays comme une habitante.",
+    "carn.lead":"Dès votre réservation, Aurélie vous envoie ses livrets du Perche — fruit de plus de 30 ans d'exploration. De vraies inspirations pour découvrir le territoire selon vos goûts et vos envies : les guides qu'elle aurait aimé avoir en arrivant ici, pour décrypter le pays comme une habitante.",
     "carn.c1h":"Le livret de bienvenue","carn.c1p":"Un livret de suggestions et de coups de cœur, envoyé dès la réservation pour vous faire patienter — et rêver — jusqu'au séjour.","carn.c1m":"Offert dès la réservation",
     "carn.c2h":"Les incontournables d'Aurélie","carn.c2p":"Sa sélection personnelle d'indispensables, à proximité immédiate du Clos de la Fuie — testée et approuvée au fil des saisons.","carn.c2m":"Ses bonnes adresses, testées & approuvées",
     "carn.c3h":"7 jours dans le Perche","carn.c3p":"Un itinéraire jour par jour, entre nature, patrimoine et activités, pour vivre le territoire en profondeur, à votre rythme.","carn.c3m":"Un itinéraire complet, jour par jour",
-    "carn.foot":"Des livrets intimes que personne d'autre ne vous donnera.","carn.cta":"Réserver & recevoir les livrets",
+    "carn.foot":"Des livrets intimes, fruit de plus de 30 ans d'exploration — que personne d'autre ne vous donnera.","carn.cta":"Réserver & recevoir les livrets",
 
-    "lois.over":"Pour toute la tribu","lois.kicker":"De 7 à 77 ans, de quoi se rassembler","lois.h2":"De quoi jouer, partager et<br>se créer de beaux souvenirs",
-    "lois.lead":"Petits et grands trouvent toujours de quoi s'occuper, ensemble :<br>une maison pensée pour fédérer la tribu, des soirées au coin du poêle<br>aux après-midi au grand air.",
+    "lois.over":"Pour toute la tribu","lois.kicker":"De 7 à 77 ans, de quoi se rassembler","lois.h2":"De quoi jouer, partager et se créer de beaux souvenirs",
+    "lois.lead":"Petits et grands trouvent toujours de quoi s'occuper, ensemble : une maison pensée pour fédérer la tribu, des soirées au coin du poêle aux après-midi au grand air.",
     "lois.c1k":"Lire & flâner","lois.c1h":"La bibliothèque de la maison","lois.c1p":"Des livres dans chaque pièce et une belle collection de BD, à dévorer dans la chaleur du poêle à bois.",
     "lois.t1a":"Livres en libre accès","lois.t1b":"Collection de BD","lois.t1c":"Coin lecture",
     "lois.c2k":"Jouer à l'abri","lois.c2h":"La salle de jeux & son piano","lois.c2p":"Un piano pour les mélomanes, et tout un coin de jeux où s'affronter en famille, à l'abri, par tous les temps.",
     "lois.t2a":"Piano","lois.t2b":"Billard indien","lois.t2c":"Cible de fléchettes","lois.t2d":"Jeux de société & de plateau","lois.t2e":"Puzzles",
     "lois.c3k":"Se dépenser dehors","lois.c3h":"Au grand air, dans le jardin","lois.c3p":"Cabane sur pilotis, parties endiablées et premières aventures : le jardin clos devient un terrain de jeu rien qu'à vous.",
     "lois.t3a":"Cabane sur pilotis","lois.t3b":"Tracteurs à pédales","lois.t3c":"Table de ping-pong","lois.t3d":"Jeux de raquettes",
-    "lois.foot":"Tout est déjà là pour fédérer la tribu —<br>il ne reste plus qu'à choisir par quoi commencer.",
+    "lois.foot":"Tout est déjà là pour fédérer la tribu — il ne reste plus qu'à choisir par quoi commencer.",
 
     "region.over":"Le Perche & La Perrière","region.kicker":"Bienvenue dans l'un des plus beaux coins de France","region.h2":"C'est quoi, le Perche ?",
     "region.lead":"Imaginez un pays de collines douces, de forêts profondes et de manoirs cachés, à seulement 2 h de Paris. Le Perche, c'est la campagne française telle qu'on la rêve — vallonnée, verte, préservée. Ici, pas de foule : juste le chant des oiseaux, les chemins creux et le temps qui ralentit.",
@@ -148,7 +148,7 @@ window.I18N = {
 
     "faq.over":"Questions fréquentes","faq.h2":"Tout ce qu'il faut savoir",
 
-    "insta.over":"Suivez la vie du Clos","insta.h":"Le Perche au fil des saisons, sur Instagram","insta.p":"Le verger en fleurs, les bons plans d'Aurélie, les coulisses de la maison et les petits bonheurs du quotidien. Abonnez-vous pour ne rien manquer — et laissez-vous donner envie.","insta.follow":"Suivre",
+    "insta.over":"Suivez la vie du Clos","insta.h":"Le Perche au fil des saisons, sur Instagram","insta.p":"Plus de 100 photos pour découvrir l'ambiance unique du Clos de la Fuie : le verger en fleurs, les recoins secrets du jardin, les coulisses de la maison et les petits bonheurs du quotidien au fil des saisons. Une belle façon de se laisser rêver avant d'arriver — et de prolonger le séjour après le départ.","insta.follow":"Suivre",
 
     "final.over":"Été 2026","final.h":"Et si vos prochaines vacances commençaient ici ?",
     "final.p":"Quelques semaines sont encore libres cet été. Envoyez votre demande aujourd'hui — Aurélie vous répond sous 24 h.",
@@ -156,7 +156,7 @@ window.I18N = {
 
     "foot.about":"Gîte familial de charme au cœur de La Perrière, Petite Cité de Caractère du Perche. 6 personnes, 3 chambres, jardin clos & cabane. À 2 h de Paris.",
     "foot.visit":"Visiter","foot.book":"Réserver","foot.rates":"Tarifs & saisons","foot.avail":"Disponibilités",
-    "foot.journal":"Le journal","foot.blog":"Tous les articles","foot.perriere":"La Perrière","foot.rainy":"Le Perche sous la pluie",
+    "foot.journal":"Le journal","foot.blog":"Tous les articles","foot.perriere":"La Perrière","foot.rainy":"Le Perche quand il pleut",
     "foot.contact":"Contact","foot.legal":"Gîte familial · Location saisonnière · 6 personnes",
 
     "mcta.from":"À partir de","mcta.week":"/ nuit"
@@ -169,11 +169,11 @@ window.I18N = {
     "mm.house":"Bedrooms, living space, amenities","mm.garden":"The walled garden & treehouse",
     "mm.region":"The village & the region","mm.reviews":"What our guests say","mm.journal":"The blog & our articles","mm.conc":"Delphine, a bespoke stay",
 
-    "journal.over":"The Clos journal","journal.h":"The Perche, told by Aurélie","journal.lead":"Heritage, walks, good addresses and local stories: articles written by Aurélie to help you discover the Perche.","journal.all":"All articles","journal.read":"Read the article →",
+    "journal.over":"The Clos journal","journal.h":"The Perche, told by Aurélie","journal.lead":"Heritage, walks, good addresses and local stories: find all our articles on the Clos de la Fuie blog.","journal.all":"All articles","journal.read":"Read the article →",
     "jr1.k":"The house","jr1.h":"Le Clos de la Fuie, at Aurélie & François'",
     "jr2.k":"The region","jr2.h":"At the heart of the Perche",
     "jr3.k":"The village","jr3.h":"La Perrière, pearl of the Perche",
-    "jr4.k":"Good to know","jr4.h":"The Perche in the rain: our must-dos",
+    "jr4.k":"Good to know","jr4.h":"The Perche when it rains: our must-dos",
 
     "hero.rating":"5 / 5 · A family favourite on Google Reviews and Airbnb",
     "hero.h1":"Le Clos de la Fuie,<br><em>your country home</em>",
@@ -212,8 +212,8 @@ window.I18N = {
     "bed1.h":"La Miroir","bed1.cfg":"1 king bed","bed1.p":"The large main bedroom, with its library. \nMorning light, an original fireplace and a view over the village.","bed1.f1":"Village view","bed1.f2":"Fireplace","bed1.f3":"Desk",
     "bed2.h":"La Rétro Voyage","bed2.cfg":"1 double bed","bed2.p":"A room bathed in light all day long.\nAn original fireplace and a cosy reading nook.","bed2.f1":"Garden view","bed2.f2":"Village side",
     "bed3.h":"La Gustavienne","bed3.cfg":"1 double + 1 single","bed3.p":"A bright room with two views: garden and village.\nAn original fireplace, a workspace and a reading corner.","bed3.f1":"Village & garden view","bed3.f2":"Desk",
-    "qb.text":"“Here, time stands still.<br>You live outdoors, dine late, the children run — and Paris feels a world away. ”","qb.by":"Le Clos de la Fuie · La Perrière",
-    "iq.text":"“We lay the big table out in the garden, in the shade of the trees — and lunch drifts on, gently, until evening.”","iq.by":"Aurélie · Le Clos de la Fuie",
+    "qb.text":"Here, time stands still.<br>You live outdoors, dine late, the children run — and Paris feels a world away. ”","qb.by":"Le Clos de la Fuie · La Perrière",
+    "iq.text":"We lay the big table out in the garden, in the shade of the trees — and lunch drifts on, gently, until evening.”","iq.by":"Aurélie · Le Clos de la Fuie",
 
     "garden.over":"Garden & Cabin","garden.kicker":"Time, suspended — outdoors","garden.h2":"For a family, the real luxury: an outdoors of your own",
     "garden.lead":"The garden, orchard and treehouse are so many places to rest, recharge and play — an invitation to take and share good time together, quite naturally.",
@@ -269,14 +269,14 @@ window.I18N = {
     "conc.c2h":"Breakfasts","conc.c2p":"Pastries, fresh bread and local produce delivered as you wake, to ease into the day.",
     "conc.c3h":"Babysitting","conc.c3p":"An evening for two or dinner in the village while the children are in good hands.",
     "conc.c4h":"Bespoke, à la carte","conc.c4p":"Groceries on arrival, picnic baskets, bookings, little touches… just ask.",
-    "conc.foot":"Delphine is there throughout your stay<br>like a hotel service,<br>in the comfort of a family home.",
+    "conc.foot":"Delphine is there throughout your stay — like a hotel service, in the comfort of a family home.",
 
     "carn.over":"A house exclusive","carn.kicker":"Sent with every booking — found nowhere else","carn.h2":"Aurélie's booklets",
-    "carn.lead":"As soon as you book, Aurélie sends you her Perche booklets. Real inspiration to discover the region to your own taste: the guides she wishes she'd had when she arrived, to read the land like a local.",
+    "carn.lead":"As soon as you book, Aurélie sends you her Perche booklets — the fruit of over 30 years of exploration. Real inspiration to discover the region to your own taste: the guides she wishes she'd had when she arrived, to read the land like a local.",
     "carn.c1h":"The welcome booklet","carn.c1p":"A booklet of suggestions and favourites, sent the moment you book to keep you dreaming until your stay.","carn.c1m":"Sent the moment you book",
     "carn.c2h":"Aurélie's must-sees","carn.c2p":"Her personal selection of essentials, right on the doorstep of Le Clos de la Fuie — tried and tested season after season.","carn.c2m":"Her addresses, tried & tested",
     "carn.c3h":"7 days in the Perche","carn.c3p":"A day-by-day itinerary across nature, heritage and activities, to live the region deeply, at your own pace.","carn.c3m":"A full day-by-day itinerary",
-    "carn.foot":"Intimate booklets that no one else will hand you.","carn.cta":"Book & receive the booklets",
+    "carn.foot":"Intimate booklets, the fruit of 30+ years of exploration — that no one else will hand you.","carn.cta":"Book & receive the booklets",
 
     "lois.over":"For the whole tribe","lois.kicker":"From 7 to 77, plenty to bring everyone together","lois.h2":"Everything to play, share and make lasting memories",
     "lois.lead":"Young and old always find something to do together: a house designed to bring the tribe together, from evenings by the stove to afternoons in the fresh air.",
@@ -313,7 +313,7 @@ window.I18N = {
 
     "faq.over":"Frequently asked","faq.h2":"Everything you need to know",
 
-    "insta.over":"Follow life at the Clos","insta.h":"The Perche through the seasons, on Instagram","insta.p":"The orchard in bloom, Aurélie's local tips, behind the scenes at the house and the little joys of everyday life. Follow along so you don't miss a thing — and let yourself be tempted.","insta.follow":"Follow",
+    "insta.over":"Follow life at the Clos","insta.h":"The Perche through the seasons, on Instagram","insta.p":"Over 100 photos to discover the unique atmosphere of Le Clos de la Fuie: the orchard in bloom, the hidden corners of the garden, behind the scenes of the house and the little everyday moments through the seasons. A lovely way to dream before you arrive — and to relive the stay after you leave.","insta.follow":"Follow",
 
     "final.over":"Summer 2026","final.h":"What if your next holiday started right here?",
     "final.p":"A few weeks are still free this summer. Send your request today — Aurélie replies within 24h.",
@@ -321,7 +321,7 @@ window.I18N = {
 
     "foot.about":"A charming family gîte in the heart of La Perrière, a listed village of character in the Perche. 6 guests, 3 bedrooms, walled garden & treehouse. 2 hrs from Paris.",
     "foot.visit":"Visit","foot.book":"Book","foot.rates":"Rates & seasons","foot.avail":"Availability",
-    "foot.journal":"The journal","foot.blog":"All articles","foot.perriere":"La Perrière","foot.rainy":"The Perche in the rain",
+    "foot.journal":"The journal","foot.blog":"All articles","foot.perriere":"La Perrière","foot.rainy":"The Perche when it rains",
     "foot.contact":"Contact","foot.legal":"Family gîte · Holiday rental · sleeps 6",
 
     "mcta.from":"From","mcta.week":"/ night"
