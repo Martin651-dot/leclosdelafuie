@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="14" fill="#28341F"/>
+  <!-- Toiture -->
+  <polygon points="50,18 79,48 21,48" fill="#F7F2E8"/>
+  <!-- Corps de la maison -->
+  <rect x="24" y="47" width="52" height="36" fill="#F7F2E8"/>
+  <!-- Porte centrale arrondie -->
+  <path d="M43 83 L43 67 Q43 60 50 60 Q57 60 57 67 L57 83 Z" fill="#28341F"/>
+  <!-- Fenêtre gauche -->
+  <rect x="28" y="53" width="12" height="11" rx="1.5" fill="#28341F"/>
+  <line x1="34" y1="53" x2="34" y2="64" stroke="#F7F2E8" stroke-width="1"/>
+  <line x1="28" y1="58.5" x2="40" y2="58.5" stroke="#F7F2E8" stroke-width="1"/>
+  <!-- Fenêtre droite -->
+  <rect x="60" y="53" width="12" height="11" rx="1.5" fill="#28341F"/>
+  <line x1="66" y1="53" x2="66" y2="64" stroke="#F7F2E8" stroke-width="1"/>
+  <line x1="60" y1="58.5" x2="72" y2="58.5" stroke="#F7F2E8" stroke-width="1"/>
+  <!-- Cheminée terracotta -->
+  <rect x="61" y="22" width="7" height="16" rx="1" fill="#B05E3B"/>
+  <!-- Ligne de sol terracotta -->
+  <rect x="18" y="83" width="64" height="3" rx="1.5" fill="#B05E3B" opacity="0.7"/>
+</svg>
