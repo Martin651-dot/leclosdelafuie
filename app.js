@@ -101,6 +101,14 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
   $$('#mobileMenu a').forEach(a=> a.addEventListener('click', closeMenu));
+  const mobCtaMenu = $('#mobCtaMenu');
+  if(mobCtaMenu) mobCtaMenu.addEventListener('click', ()=>{
+    const open = mm.classList.toggle('open');
+    tog.classList.toggle('on', open);
+    nav.classList.toggle('solid', open || window.scrollY>40);
+    document.body.classList.toggle('scrolled', open || window.scrollY>40);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
 
   /* ---------------- smooth anchor offset ---------------- */
   $$('a[href^="#"]').forEach(a=>{

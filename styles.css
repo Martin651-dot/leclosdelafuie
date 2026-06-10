@@ -448,11 +448,10 @@ textarea{resize:vertical; min-height:96px}
 .cta-band .lead{color:rgba(247,242,232,.82); max-width:50ch; margin:18px auto 0}
 .cta-band .btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px}
 
-.mobile-cta{position:fixed; left:0; right:0; bottom:0; z-index:50; background:rgba(247,242,232,.95); backdrop-filter:blur(10px); box-shadow:0 -1px 0 var(--line); padding:11px var(--pad); display:none; align-items:center; justify-content:space-between; gap:14px; transform:translateY(110%); transition:transform .4s var(--ease)}
+.mobile-cta{position:fixed; left:0; right:0; bottom:0; z-index:50; background:rgba(247,242,232,.95); backdrop-filter:blur(10px); box-shadow:0 -1px 0 var(--line); padding:11px var(--pad); display:none; align-items:center; justify-content:center; gap:12px; transform:translateY(110%); transition:transform .4s var(--ease)}
 .mobile-cta.show{transform:translateY(0)}
-.mobile-cta .pm{font-size:13px; color:var(--ink-soft)}
-.mobile-cta .pm b{font-family:var(--serif); font-size:20px; color:var(--forest-700); display:block}
-.mobile-cta .btn{flex:none}
+.mobile-cta .btn{flex:1}
+.mcta-menu{background:transparent; border:1.5px solid var(--forest); color:var(--forest); font-weight:600; border-radius:8px; padding:12px 16px; font-size:15px; cursor:pointer; text-align:center}
 
 /* =========================================================
    FOOTER
