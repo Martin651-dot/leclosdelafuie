@@ -6,7 +6,6 @@
 <title>Page introuvable — Le Clos de la Fuie</title>
 <meta name="description" content="Cette page est introuvable. Retournez à l'accueil du Clos de la Fuie.">
 <link rel="stylesheet" href="/styles.css">
-</head>
 <script>
 (function(){
   var p = window.location.pathname.toLowerCase().replace(/\/+$/, '');
@@ -31,11 +30,12 @@
     '/perche': '/#territoire',
     '/territoire': '/#territoire',
     '/la-perriere': '/articles/la-perriere.html',
+    '/blogperchepatrimoines': '/#journal',
+    '/blog-perche-patrimoines': '/#journal',
     '/blog': '/#journal',
     '/journal': '/#journal',
     '/contact': '/#reserver',
     '/mentions-legales': '/mentions-legales.html',
-    '/mentions-l': '/mentions-legales.html',
     '/legal': '/mentions-legales.html',
     '/tous-les-articles': '/#journal',
     '/tous-les-article': '/#journal'
@@ -43,11 +43,12 @@
   for (var key in map) {
     if (p === key || p.indexOf(key + '/') === 0 || p.indexOf(key + '-') === 0) {
       window.location.replace('https://leclosdelafuie.fr' + map[key]);
-      break;
+      return;
     }
   }
 })();
 </script>
+</head>
 <body>
 
 <header class="art-top">
