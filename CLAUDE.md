@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code when working in this workspace.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ---
 
@@ -141,3 +141,49 @@ L'avantage : pas de bruit. Seulement ce qui me concerne vraiment, vu mes objecti
 - L'historique se construit naturellement au fil des sessions, pas besoin de tout y mettre
 - Pour les documents externes (PDFs, exports Notion, captures d'écran), utilisez systématiquement `context/import/`
 - Ne modifiez pas manuellement HISTORY.md, laissez Claude s'en charger via `/update`
+
+---
+
+## Site leclosdelafuie.fr — Architecture technique
+
+Le site est un **site statique pur** (aucun build step, aucune dépendance npm). Les fichiers sont dans la racine du workspace.
+
+### Déploiement
+
+```powershell
+# Pousser vers GitHub Pages (branche locale master → remote main)
+git push origin master:main
+```
+
+Le site est en ligne sous 1-2 minutes après le push. La branche locale s'appelle `master`, la remote `main` — toujours spécifier `master:main`.
+
+### Fichiers principaux
+
+| Fichier | Rôle |
+|---------|------|
+| `index.html` | Page unique (~860 lignes), toutes les sections du site |
+| `styles.css` | Feuille de style principale |
+| `app.js` | Runtime : i18n, nav scroll, menu mobile, lightbox, calendrier, formulaire Formspree |
+| `i18n.js` | Toutes les chaînes de texte FR/EN + données dynamiques (avis, équipements, FAQ, tips) |
+| `articles/` | 4 pages blog statiques |
+| `images/` | Toutes les photos |
+
+### Système i18n — règle critique
+
+Le texte écrit directement dans `index.html` **prime sur** les entrées FR de `i18n.js`. Au chargement, `app.js` capture le contenu inline de chaque `[data-i18n]` et l'enregistre comme source de vérité française (voir `app.js` lignes 17-21). Conséquence : pour modifier un texte FR, éditer `index.html`. Pour modifier un texte EN, éditer `i18n.js`.
+
+Les données dynamiques (avis clients, liste équipements, FAQ, tips) sont dans `window.I18N_DATA` dans `i18n.js` et construites par les fonctions `buildReviews()`, `buildEquip()`, `buildFaq()`, `buildTips()` dans `app.js`.
+
+### Calendrier et disponibilités
+
+Les périodes réservées sont hardcodées dans `app.js` dans le tableau `bookedRanges` (format `{start: 'YYYY-MM-DD', nights: N}`). Il n'y a pas de backend ni d'API de calendrier.
+
+### Formulaire de réservation
+
+Branché sur Formspree : `https://formspree.io/f/xbdegvor` → envoi email vers `leclosdelafuie@gmail.com`.
+
+### Infrastructure
+
+- **Hébergement :** GitHub Pages, dépôt `github.com/Martin651-dot/leclosdelafuie`
+- **Domaine :** `leclosdelafuie.fr`, DNS géré via WordPress.com (4 enregistrements A vers GitHub)
+- **CNAME :** fichier `CNAME` à la racine contient `leclosdelafuie.fr` — ne jamais supprimer
